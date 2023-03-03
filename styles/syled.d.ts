@@ -8,9 +8,9 @@ declare module "styled-components" {
       orange: string;
     };
     md: {
-      desktop: number;
-      tablet: number;
-      phone: number;
+      large: number;
+      medium: number;
+      small: number;
     };
   }
 }

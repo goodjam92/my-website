@@ -1,11 +1,11 @@
 import { css, CSSObject, SimpleInterpolation } from "styled-components";
 
-type DeviceType = "desktop" | "tablet" | "phone";
+type DeviceType = "large" | "medium" | "small";
 
 const sizes: Record<DeviceType, number> = {
-  desktop: 1200,
-  tablet: 768,
-  phone: 600,
+  large: 1200,
+  medium: 768,
+  small: 600,
 };
 
 const media = Object.entries(sizes).reduce((acc, [key, value]) => {
@@ -15,7 +15,7 @@ const media = Object.entries(sizes).reduce((acc, [key, value]) => {
       first: CSSObject | TemplateStringsArray,
       ...interpolations: SimpleInterpolation[]
     ) => css`
-      @media (max-width: ${value}rem) {
+      @media (max-width: ${value}px) {
         ${css(first, ...interpolations)}
       }
     `,

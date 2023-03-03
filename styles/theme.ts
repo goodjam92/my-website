@@ -7,8 +7,8 @@ export const theme: DefaultTheme = {
     orange: "#eb7952",
   },
   md: {
-    desktop: 1200,
-    tablet: 768,
-    phone: 600,
+    large: 1200,
+    medium: 768,
+    small: 600,
   },
 };
