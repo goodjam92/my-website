@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@profileAPI/*": ["./components/*"]
     },
     "baseUrl": ".",
     "rootDir": "."
