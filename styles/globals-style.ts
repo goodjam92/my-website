@@ -18,8 +18,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -ms-overflow-style: none;
+    
   }
-  
+  ::-webkit-scrollbar {
+    display: none;
+}
   button {
         background: none;
         padding: 0;
