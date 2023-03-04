@@ -1,32 +1,37 @@
-import { useRouter } from "next/router";
 import styled from "styled-components";
-import About from "@/components/section/About";
-import Project from "@/components/section/Project";
-import Wellcome from "@/components/section/Wellcome";
-import { Spacer } from "@/components/Spacer";
-import { media } from "@/styles/media";
+import { FullPage, Slide } from "react-full-page";
+import NavButton from "@/components/NavButton";
 
 export default function Home() {
-  const router = useRouter();
-  console.log(router);
-
   return (
-    <LandingPageWrap>
-      <Wellcome />
-      <Spacer height={10} />
-      <About />
-      <Project />
-    </LandingPageWrap>
+    <FullPage controls={NavButton}>
+      <Slide>
+        <ContentsBox>hi</ContentsBox>
+      </Slide>
+      <Slide>
+        <ContentsBox2>hi</ContentsBox2>
+      </Slide>
+      <Slide>
+        <ContentsBox3>hi</ContentsBox3>
+      </Slide>
+    </FullPage>
   );
 }
 
-const LandingPageWrap = styled.div`
+const ContentsBox = styled.div`
   height: 100vh;
-  padding: 2rem;
-  box-sizing: border-box;
-  overflow: auto;
-  border-radius: 2rem;
-  ${media.medium`
-    margin-left: 0rem;
-  `}
+  width: 100vw;
+  background-color: red;
+`;
+
+const ContentsBox2 = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background-color: green;
+`;
+
+const ContentsBox3 = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background-color: yellow;
 `;

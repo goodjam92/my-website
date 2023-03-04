@@ -4,51 +4,53 @@ import styled from "styled-components";
 import {
   FcBusinessContact,
   FcTemplate,
-  FcWikipedia,
   FcPhone,
   FcSportsMode,
 } from "react-icons/fc";
-import Link from "next/link";
-import { Dispatch, SetStateAction } from "react";
+import { FaRegIdCard } from "react-icons/fa";
 
 export interface NavBarProps {
-  setDarkMode: Dispatch<SetStateAction<boolean>>;
+  onClickHomeIcon: () => void;
+  onClickProjectIcon: () => void;
+  onClickCareerIcon: () => void;
+  onClickTmiIcon: () => void;
+  onClickContactIcon: () => void;
 }
 
-export default function NavBar({ setDarkMode }: NavBarProps) {
-  const router = useRouter();
-  console.log(router);
+export default function NavBar({
+  onClickHomeIcon,
+  onClickProjectIcon,
+  onClickCareerIcon,
+  onClickTmiIcon,
+  onClickContactIcon,
+}: NavBarProps) {
   return (
     <Nav>
       <NavMenu>
         <NavList>
-          <Link href="">
-            <NavButton onClick={() => setDarkMode((prev) => !prev)}>
-              <FcBusinessContact size="100%" name="about" />
-            </NavButton>
-          </Link>
+          <NavButton onClick={onClickHomeIcon}>
+            <FcBusinessContact size="100%" name="home" />
+          </NavButton>
         </NavList>
         <NavList>
-          <NavButton>
+          <NavButton onClick={onClickProjectIcon}>
             <FcTemplate size="100%" name="project" />
           </NavButton>
         </NavList>
         <NavList>
-          <NavButton>
+          <NavButton onClick={onClickCareerIcon}>
             <FcSportsMode size="100%" name="career" />
           </NavButton>
         </NavList>
         <NavList>
-          <NavButton>
-            <FcWikipedia size="100%" name="tmi" />
+          <NavButton onClick={onClickTmiIcon}>
+            <FaRegIdCard size="100%" name="tmi" />
           </NavButton>
         </NavList>
         <NavList>
-          <Link href="">
-            <NavButton>
-              <FcPhone size="100%" name="contact" />
-            </NavButton>
-          </Link>
+          <NavButton onClick={onClickContactIcon}>
+            <FcPhone size="100%" name="contact" />
+          </NavButton>
         </NavList>
       </NavMenu>
     </Nav>
@@ -56,6 +58,7 @@ export default function NavBar({ setDarkMode }: NavBarProps) {
 }
 
 const Nav = styled.nav`
+  width: 6.2rem;
   display: flex;
   justify-content: center;
   border: 1px solid;
@@ -79,7 +82,7 @@ const NavList = styled.li`
   box-sizing: border-box;
 `;
 
-const NavButton = styled.div`
+const NavButton = styled.button`
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -89,14 +92,14 @@ const NavButton = styled.div`
   border-radius: 0.6rem;
   transition-duration: 0.4s;
   &:hover {
-    box-shadow: 0.4rem 0.4rem 0.8rem #bec5d0;
+    box-shadow: 0.4rem 0.4rem 0.8rem #88898a;
     transition-duration: 0.2s;
     width: 5.2rem;
     height: 5.2rem;
   }
   &:active {
-    box-shadow: inset -0.3rem -0.2rem 1.4rem #fbfbfb,
-      inset 0.4rem 0.8rem 0.8rem #bec5d0;
+    box-shadow: inset -0.3rem -0.2rem 1.4rem #a9a2a2,
+      inset 0.4rem 0.8rem 0.8rem #89898b;
     width: 4.8rem;
     height: 4.8rem;
   }
