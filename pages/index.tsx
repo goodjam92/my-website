@@ -1,37 +1,29 @@
-import styled from "styled-components";
 import { FullPage, Slide } from "react-full-page";
-import NavButton from "@/components/NavButton";
+import NavBar from "@/components/NavMenu";
+import About from "./about";
+import Project from "./project";
+import Intro from "./intro";
+import Career from "./career";
+import Contact from "./contact";
 
 export default function Home() {
   return (
-    <FullPage controls={NavButton}>
-      <Slide>
-        <ContentsBox>hi</ContentsBox>
+    <FullPage controls={NavBar}>
+      <Slide style={{ minHeight: "100vh" }}>
+        <Intro />
       </Slide>
-      <Slide>
-        <ContentsBox2>hi</ContentsBox2>
+      <Slide style={{ minHeight: "100vh" }}>
+        <About />
       </Slide>
-      <Slide>
-        <ContentsBox3>hi</ContentsBox3>
+      <Slide style={{ minHeight: "100vh" }}>
+        <Project />
+      </Slide>
+      <Slide style={{ minHeight: "100vh" }}>
+        <Career />
+      </Slide>
+      <Slide style={{ minHeight: "100vh" }}>
+        <Contact />
       </Slide>
     </FullPage>
   );
 }
-
-const ContentsBox = styled.div`
-  height: 100vh;
-  width: 100vw;
-  background-color: red;
-`;
-
-const ContentsBox2 = styled.div`
-  height: 100vh;
-  width: 100vw;
-  background-color: green;
-`;
-
-const ContentsBox3 = styled.div`
-  height: 100vh;
-  width: 100vw;
-  background-color: yellow;
-`;
