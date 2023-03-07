@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   ${normalize}
   html {
     font-size: 62.5%;
+    height: 100%;
     -webkit-text-size-adjust: none;
     font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;       
     font-display: fallback;
@@ -23,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   ::-webkit-scrollbar {
     display: none;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
 }
   button {
         background: none;
