@@ -1,77 +1,54 @@
-import { useCallback, useEffect } from "react";
-import { FullPageProps } from "react-full-page";
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 interface NavButtonProps {
-  getCurrentSlideIndex: () => number;
-  scrollToSlide: (n: number) => void;
+  slideIndex: () => number;
+  onClick: () => void;
+  buttonText: string;
+  buttonIndex: string;
 }
 
-interface ControllerProps {
-  index: number;
+export default function NavButton({
+  slideIndex,
+  onClick,
+  buttonText,
+  buttonIndex,
+}: NavButtonProps) {
+  return (
+    <NavItemContainer>
+      <NavItem index={slideIndex()} name={buttonIndex} onClick={onClick}>
+        {buttonText}
+      </NavItem>
+    </NavItemContainer>
+  );
 }
 
-const Controller = styled.div<ControllerProps>`
-  height: 50px;
-  width: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
-  color: white;
-  background-color: ${(props) => (props.index === 0 ? "transparent" : "white")};
+const NavItemContainer = styled.li`
+  width: 10.8rem;
+  height: 4.8rem;
+  font-size: 1.6rem;
+  list-style: none;
 `;
 
-interface ButtonProps {
+interface NavItemProps {
   index: number;
   name: string;
 }
 
-const Button = styled.button<ButtonProps>`
-  height: 50px;
-  width: 50px;
+const NavItem = styled.button<NavItemProps>`
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.05rem;
+  font-size: 2rem;
+  font-family: "Audiowide-Regular";
+  border-radius: 1rem;
+  color: ${(props) =>
+    props.index === parseInt(props.name) ? "black" : "white"};
   background-color: ${(props) =>
-    props.index === parseInt(props.name) ? "blue" : "white"};
+    props.index === parseInt(props.name) ? "tomato" : "transparent"};
+  &:hover {
+    font-size: 2.2rem;
+    transition-duration: 0.4s;
+    text-decoration: underline;
+  }
 `;
-
-export default function NavButton({
-  getCurrentSlideIndex,
-  scrollToSlide,
-}: NavButtonProps) {
-  const slideIndex: number = getCurrentSlideIndex();
-
-  useEffect(() => {
-    console.log(slideIndex);
-  }, [slideIndex]);
-
-  return (
-    <Controller index={slideIndex}>
-      <Button
-        onClick={() => {
-          scrollToSlide(0);
-        }}
-        index={slideIndex}
-        name="0"
-      >
-        one
-      </Button>
-      <Button
-        onClick={() => {
-          scrollToSlide(1);
-        }}
-        index={slideIndex}
-        name="1"
-      >
-        two
-      </Button>
-      <Button
-        onClick={() => {
-          scrollToSlide(2);
-        }}
-        index={slideIndex}
-        name="2"
-      >
-        three
-      </Button>
-    </Controller>
-  );
-}
