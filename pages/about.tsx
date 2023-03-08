@@ -3,18 +3,19 @@ import {
   ContentBox,
   InnerContainer,
 } from "@/components/common/commonStyle";
+import { ContentBox } from "@/components/common/commonStyle";
 import styled from "styled-components";
 
 export default function About() {
   return (
     <AboutWrap>
-      <AboutContent>
+      <ContentBox>
         <RowContent>
           <Lang>Lang</Lang>
           <VersionCoop>Version & Co-op</VersionCoop>
           <WorkshopLib>Workshop Library</WorkshopLib>
         </RowContent>
-      </AboutContent>
+      </ContentBox>
     </AboutWrap>
   );
 }
