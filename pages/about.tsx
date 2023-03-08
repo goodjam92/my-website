@@ -47,12 +47,4 @@ const Lang = styled.div`
   width: 100%;
 `;
 
-const VersionCoop = styled.div`
-  background-color: tomato;
-  width: 100%;
-`;
-
-const WorkshopLib = styled.div`
-  background-color: greenyellow;
-  width: 100%;
 `;
