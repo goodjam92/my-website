@@ -5,6 +5,7 @@ import { ContentBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
 import Description from "@/components/about/Description";
 import { fadeOut, slideUp } from "@/components/animation/animation";
+import { Spacer } from "@/components/Spacer";
 
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -48,6 +49,7 @@ export default function About() {
               setselectedSkill={setselectedSkill}
             />
           </LeftContent>
+          <Spacer width={2} />
           <RightContent visible={localVisible}>
             <Description selectedSkill={selectedSkill} />
           </RightContent>
@@ -73,7 +75,7 @@ const RowContent = styled.div`
 `;
 
 const LeftContent = styled.div`
-  flex: 0.5;
+  width: fit-content;
 `;
 
 const RightContent = styled.div<VisibleProps>`

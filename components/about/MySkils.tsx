@@ -35,7 +35,7 @@ export default function MySkils({
 }
 
 const List = styled.ul`
-  min-height: 40rem;
+  min-height: 44rem;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ interface ListItemProps {
 
 const ListItem = styled.li<ListItemProps>`
   height: 100%;
-  width: fit-content + 1;
+  width: fit-content;
   font-size: 6rem;
   cursor: pointer;
   -webkit-text-stroke: 0.05rem #ffffff;
