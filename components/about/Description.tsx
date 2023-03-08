@@ -1,16 +1,8 @@
+import { CO_OP_VERSIONING, FRONT_END_LOGO } from "@/hooks/SkillList";
 import styled from "styled-components";
 import MySkillLogo from "./MySkillLogo";
 
-const FRONT_END_LOGO = [
-  "/assets/image/HTML5.svg",
-  "/assets/image/CSS.svg",
-  "/assets/image/Javascript.svg",
-  "/assets/image/ES6.jpg",
-  "/assets/image/React.svg",
-  "/assets/image/Typescript.svg",
-];
 
-const CO_OP_VERSIONING = [];
 
 interface DescriptionProps {
   selectedSkill: string;
