@@ -1,7 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 
-const mySkill: Array<string> = [`FrontEnd`, "co-op", "library"];
+const MY_SKILL: Array<string> = [
+  `FrontEnd`,
+  "Co-op&Versioning",
+  "Library&Tool",
+];
 
 interface MySkillsProps {
   selectedSkill: string;
@@ -14,7 +18,7 @@ export default function MySkils({
 }: MySkillsProps) {
   return (
     <List>
-      {mySkill.map((item) => (
+      {MY_SKILL.map((item) => (
         <ListItem
           key={item}
           text={item}
