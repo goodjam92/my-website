@@ -1,23 +1,26 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 
 const mySkill: Array<string> = [`FrontEnd`, "co-op", "library"];
 
 interface MySkillsProps {
-  selected: string;
-  setSelected: Dispatch<SetStateAction<string>>;
+  selectedSkill: string;
+  setselectedSkill: Dispatch<SetStateAction<string>>;
 }
 
-export default function MySkils({ selected, setSelected }: MySkillsProps) {
+export default function MySkils({
+  selectedSkill,
+  setselectedSkill,
+}: MySkillsProps) {
   return (
     <List>
       {mySkill.map((item) => (
         <ListItem
           key={item}
           text={item}
-          selected={selected}
+          selectedSkill={selectedSkill}
           onClick={(e: any) => {
-            setSelected(e.target.innerText);
+            setselectedSkill(e.target.innerText);
           }}
         >
           {item}
@@ -38,7 +41,7 @@ const List = styled.ul`
 
 interface ListItemProps {
   text: string;
-  selected: string;
+  selectedSkill: string;
 }
 
 const ListItem = styled.li<ListItemProps>`
@@ -50,10 +53,9 @@ const ListItem = styled.li<ListItemProps>`
   font-family: "CarterOne-Regular";
   position: relative;
   color: ${(props) =>
-    props.selected === props.text ? "#b201a3" : "transparent"};
+    props.selectedSkill === props.text ? "#b201a3" : "transparent"};
   text-shadow: ${(props) =>
-    props.selected === props.text ? "0.1rem 0.1rem 0.2rem white" : "none"};
-
+    props.selectedSkill === props.text ? "0.1rem 0.1rem 0.2rem white" : "none"};
   ::after {
     content: "${(props) => props.text}";
     position: absolute;
