@@ -31,9 +31,11 @@ export const slideIn = keyframes`
 
 export const slideUp = keyframes`
 0%{
-    transform: translateY(30rem);
+    transform: translateY(10rem);
+    opacity: 0;
 }
 100%{
     transform: translateY(0px);
+    opacity: 1;
 }
 `;
