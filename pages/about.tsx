@@ -9,12 +9,14 @@ import { fadeOut, slideUp } from "@/components/animation/animation";
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const [localVisible, setLocalVisible] = useState<boolean>(false);
+  const [selectedSkill, setselectedSkill] = useState<string>("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
           setLocalVisible(false);
+          setselectedSkill("");
           return;
         }
         setLocalVisible(entry.isIntersecting);
@@ -41,7 +43,10 @@ export default function About() {
       <ContentBox>
         <RowContent>
           <LeftContent>
-            <MySkils />
+            <MySkils
+              selectedSkill={selectedSkill}
+              setselectedSkill={setselectedSkill}
+            />
           </LeftContent>
           <RightContent visible={localVisible}>
           </RightContent>
