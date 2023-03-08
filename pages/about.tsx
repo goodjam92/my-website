@@ -49,6 +49,7 @@ export default function About() {
             />
           </LeftContent>
           <RightContent visible={localVisible}>
+            <Description selectedSkill={selectedSkill} />
           </RightContent>
         </RowContent>
       </ContentBox>
