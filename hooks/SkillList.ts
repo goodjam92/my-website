@@ -14,3 +14,9 @@ export const CO_OP_VERSIONING = [
   "/assets/image/coop_version/jira.svg",
   "/assets/image/coop_version/confluence.png",
 ];
+
+export const LIBRARY_TOOL = [
+  "/assets/image/library&tool/emotion.png",
+  "/assets/image/library&tool/storybook.png",
+  "/assets/image/library&tool/styled.png",
+];
