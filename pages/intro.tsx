@@ -2,6 +2,7 @@ import { fadeOut, fadeInFromLeft } from "@/components/animation/animation";
 import { ContentBox, InnerContainer } from "@/components/common/commonStyle";
 import { Spacer } from "@/components/Spacer";
 import { INTRO_PAGE } from "@/hooks/TextConstant";
+import { VisibleProps } from "@/model/VisibleProps";
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 
@@ -79,11 +80,6 @@ export default function Intro() {
       </IntroWrap>
     </>
   );
-}
-
-interface VisibleProps {
-  visible: boolean;
-  delay?: number;
 }
 
 const IntroWrap = styled.section`
