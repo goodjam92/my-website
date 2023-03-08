@@ -9,9 +9,9 @@ interface DescriptionProps {
 }
 
 export default function Description({ selectedSkill }: DescriptionProps) {
-  function frontEndLogoRender() {
+  function logoRender(skillList: string[]) {
     const render = () => {
-      const renderList = FRONT_END_LOGO.map((item, index) => (
+      const renderList = skillList.map((item, index) => (
         <MySkillLogo logoFile={item} key={item} index={index} />
       ));
       return renderList;
