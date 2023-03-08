@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import styled, { css } from "styled-components";
 import { ContentBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
-import styled from "styled-components";
 
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
