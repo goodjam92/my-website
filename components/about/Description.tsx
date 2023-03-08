@@ -36,7 +36,7 @@ export default function Description({ selectedSkill }: DescriptionProps) {
 
 const DescriptionWrap = styled.div`
   width: 100%;
-  min-height: 48rem;
+  min-height: 44rem;
   display: flex;
   align-items: center;
   justify-content: center;
