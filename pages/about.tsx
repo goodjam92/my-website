@@ -1,9 +1,5 @@
-import {
-  Container,
-  ContentBox,
-  InnerContainer,
-} from "@/components/common/commonStyle";
 import { ContentBox } from "@/components/common/commonStyle";
+import MySkils from "@/components/about/MySkils";
 import styled from "styled-components";
 
 export default function About() {
@@ -11,9 +7,10 @@ export default function About() {
     <AboutWrap>
       <ContentBox>
         <RowContent>
-          <Lang>Lang</Lang>
-          <VersionCoop>Version & Co-op</VersionCoop>
-          <WorkshopLib>Workshop Library</WorkshopLib>
+          <LeftContent>
+            <MySkils />
+          </LeftContent>
+          <RightContent>Description</RightContent>
         </RowContent>
       </ContentBox>
     </AboutWrap>
@@ -26,25 +23,22 @@ const AboutWrap = styled.section`
   background: url("/assets/image/about-bg.jpeg") 50% 50% no-repeat fixed;
   background-size: cover;
   display: flex;
-  justify-content: center;
-`;
-
-const AboutContent = styled.div`
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
 const RowContent = styled.div`
-  height: 100%;
   display: flex;
-  justify-content: space-evenly;
-  height: 50rem;
+  align-items: center;
 `;
 
-const Lang = styled.div`
+const LeftContent = styled.div`
+  flex: 0.5;
+`;
+
+const RightContent = styled.div`
+  flex: 1;
+  margin-left: 4rem;
+  height: 60rem;
   background-color: white;
-  width: 100%;
-`;
-
 `;
