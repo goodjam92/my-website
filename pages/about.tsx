@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
+import { VisibleProps } from "@/model/VisibleProps";
 import { ContentBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
+import Description from "@/components/about/Description";
+import { fadeOut, slideUp } from "@/components/animation/animation";
 
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -40,7 +43,8 @@ export default function About() {
           <LeftContent>
             <MySkils />
           </LeftContent>
-          <RightContent>Description</RightContent>
+          <RightContent visible={localVisible}>
+          </RightContent>
         </RowContent>
       </ContentBox>
     </AboutWrap>
@@ -66,9 +70,24 @@ const LeftContent = styled.div`
   flex: 0.5;
 `;
 
-const RightContent = styled.div`
+const RightContent = styled.div<VisibleProps>`
   flex: 1;
   margin-left: 4rem;
-  height: 60rem;
-  background-color: white;
+  padding: 4.8rem;
+  border-radius: 1.6rem;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 192, 0.1);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0.2rem 0.7rem 1.5rem 0.8rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: 1;
+  ${(props) =>
+    props.visible === true
+      ? css`
+          animation: ${slideUp} 0.5s linear forwards;
+          animation-delay: 1s;
+        `
+      : css`
+          animation: ${fadeOut} 0.1s linear forwards;
+        `}
 `;
