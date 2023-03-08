@@ -1,5 +1,6 @@
 import { fadeOut, fadeInFromLeft } from "@/components/animation/animation";
 import { ContentBox, InnerContainer } from "@/components/common/commonStyle";
+import { Spacer } from "@/components/Spacer";
 import { INTRO_PAGE } from "@/hooks/TextConstant";
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
@@ -64,9 +65,11 @@ export default function Intro() {
               <IntroText visible={localVisible} delay={0.75}>
                 {INTRO_PAGE.LEFT_TOP_TEXT}
               </IntroText>
+              <Spacer height={2} />
               <IntroText visible={localVisible} delay={1.75}>
                 {INTRO_PAGE.LEFT_MID_TEXT}
               </IntroText>
+              <Spacer height={2} />
               <IntroText visible={localVisible} delay={2.5}>
                 {INTRO_PAGE.LEFT_BOTTOM_TEXT}
               </IntroText>
@@ -99,8 +102,7 @@ const IntroTextContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 4rem;
+  justify-content: space-between;
 `;
 
 const IntroText = styled.h1<VisibleProps>`
