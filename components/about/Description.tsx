@@ -1,11 +1,10 @@
-import { CO_OP_VERSIONING, FRONT_END_LOGO } from "@/hooks/SkillList";
+import {
+  CO_OP_VERSIONING,
   FRONT_END_LOGO,
   LIBRARY_TOOL,
 } from "@/hooks/SkillList";
 import styled from "styled-components";
 import MySkillLogo from "./MySkillLogo";
-
-
 
 interface DescriptionProps {
   selectedSkill: string;
@@ -25,7 +24,8 @@ export default function Description({ selectedSkill }: DescriptionProps) {
   return (
     <DescriptionWrap>
       <DescriptionContent>
-        {selectedSkill === "FrontEnd" && frontEndLogoRender()}
+        {selectedSkill === "FrontEnd" && logoRender(FRONT_END_LOGO)}
+        {selectedSkill === "Co-op&Versioning" && logoRender(CO_OP_VERSIONING)}
       </DescriptionContent>
     </DescriptionWrap>
   );
