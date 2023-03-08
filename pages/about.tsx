@@ -4,7 +4,7 @@ import { VisibleProps } from "@/model/VisibleProps";
 import { ContentBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
 import Description from "@/components/about/Description";
-import { fadeOut, slideUp } from "@/components/animation/animation";
+import { fadeIn, fadeOut } from "@/components/animation/animation";
 import { Spacer } from "@/components/Spacer";
 
 export default function About() {
@@ -92,7 +92,7 @@ const RightContent = styled.div<VisibleProps>`
   ${(props) =>
     props.visible === true
       ? css`
-          animation: ${slideUp} 0.5s linear forwards;
+          animation: ${fadeIn} 0.5s linear forwards;
           animation-delay: 1s;
         `
       : css`
