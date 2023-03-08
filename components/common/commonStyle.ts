@@ -9,7 +9,7 @@ export const InnerContainer = styled.div`
 `;
 
 export const ContentBox = styled.div`
-  width: 120rem;
+  min-width: 120rem;
   height: 100%;
   margin-left: 10rem;
   margin-right: 2rem;
