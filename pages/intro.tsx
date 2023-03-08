@@ -1,9 +1,5 @@
 import { fadeOut, fadeInFromLeft } from "@/components/animation/animation";
-import {
-  Container,
-  ContentBox,
-  InnerContainer,
-} from "@/components/common/commonStyle";
+import { ContentBox, InnerContainer } from "@/components/common/commonStyle";
 import { INTRO_PAGE } from "@/hooks/TextConstant";
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
@@ -62,23 +58,21 @@ export default function Intro() {
     <>
       <IntroWrap ref={ref}>
         {localVisible === true ? <MagicScreen ref={magicRef} /> : null}
-        <Container>
-          <InnerContainer>
-            <ContentBox>
-              <IntroTextContainer>
-                <IntroText visible={localVisible} delay={0.75}>
-                  {INTRO_PAGE.LEFT_TOP_TEXT}
-                </IntroText>
-                <IntroText visible={localVisible} delay={1.75}>
-                  {INTRO_PAGE.LEFT_MID_TEXT}
-                </IntroText>
-                <IntroText visible={localVisible} delay={2.5}>
-                  {INTRO_PAGE.LEFT_BOTTOM_TEXT}
-                </IntroText>
-              </IntroTextContainer>
-            </ContentBox>
-          </InnerContainer>
-        </Container>
+        <InnerContainer>
+          <ContentBox>
+            <IntroTextContainer>
+              <IntroText visible={localVisible} delay={0.75}>
+                {INTRO_PAGE.LEFT_TOP_TEXT}
+              </IntroText>
+              <IntroText visible={localVisible} delay={1.75}>
+                {INTRO_PAGE.LEFT_MID_TEXT}
+              </IntroText>
+              <IntroText visible={localVisible} delay={2.5}>
+                {INTRO_PAGE.LEFT_BOTTOM_TEXT}
+              </IntroText>
+            </IntroTextContainer>
+          </ContentBox>
+        </InnerContainer>
       </IntroWrap>
     </>
   );
@@ -106,6 +100,7 @@ const IntroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 4rem;
 `;
 
 const IntroText = styled.h1<VisibleProps>`
