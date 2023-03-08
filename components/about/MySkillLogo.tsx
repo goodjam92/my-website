@@ -25,11 +25,9 @@ const MySkillLogoItem = styled.li<MySkillLogoItme>`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0.8rem;
-  box-shadow: 0.5rem 0.5rem grey;
-  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem grey;
   position: relative;
-
   animation: ${slideDown} 0.7s linear forwards;
   animation-delay: ${(props) => props.index * 0.5}s;
 `;
