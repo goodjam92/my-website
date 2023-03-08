@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import styled from "styled-components";
 
 const mySkill: Array<string> = [`FrontEnd`, "co-op", "library"];
 
-export default function MySkils() {
-  const [selected, setSelected] = useState<string>("");
+interface MySkillsProps {
+  selected: string;
+  setSelected: Dispatch<SetStateAction<string>>;
+}
 
+export default function MySkils({ selected, setSelected }: MySkillsProps) {
   return (
     <List>
       {mySkill.map((item) => (
@@ -40,6 +43,7 @@ interface ListItemProps {
 
 const ListItem = styled.li<ListItemProps>`
   height: 100%;
+  width: fit-content + 1;
   font-size: 6rem;
   cursor: pointer;
   -webkit-text-stroke: 0.05rem #ffffff;
