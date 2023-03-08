@@ -22,7 +22,8 @@ export default function About() {
 const AboutWrap = styled.section`
   width: 100%;
   min-height: 100%;
-  background-color: rgb(0, 169, 240);
+  background: url("/assets/image/about-bg.jpeg") 50% 50% no-repeat fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
 `;
