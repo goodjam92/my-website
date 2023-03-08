@@ -5,6 +5,7 @@ const MY_SKILL: Array<string> = [
   `FrontEnd`,
   "Co-op&Versioning",
   "Library&Tool",
+  "Deploy&BackEnd",
 ];
 
 interface MySkillsProps {

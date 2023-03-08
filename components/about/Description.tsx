@@ -1,5 +1,6 @@
 import {
   CO_OP_VERSIONING,
+  DEPLOY_BACKEND,
   FRONT_END_LOGO,
   LIBRARY_TOOL,
 } from "@/hooks/SkillList";
@@ -26,6 +27,8 @@ export default function Description({ selectedSkill }: DescriptionProps) {
       <DescriptionContent>
         {selectedSkill === "FrontEnd" && logoRender(FRONT_END_LOGO)}
         {selectedSkill === "Co-op&Versioning" && logoRender(CO_OP_VERSIONING)}
+        {selectedSkill === "Library&Tool" && logoRender(LIBRARY_TOOL)}
+        {selectedSkill === "Deploy&BackEnd" && logoRender(DEPLOY_BACKEND)}
       </DescriptionContent>
     </DescriptionWrap>
   );

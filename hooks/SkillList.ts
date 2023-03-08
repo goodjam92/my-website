@@ -20,3 +20,8 @@ export const LIBRARY_TOOL = [
   "/assets/image/library&tool/storybook.png",
   "/assets/image/library&tool/styled.png",
 ];
+
+export const DEPLOY_BACKEND = [
+  "/assets/image/deploy&backend/firebase.png",
+  "/assets/image/deploy&backend/vercel.svg",
+];
