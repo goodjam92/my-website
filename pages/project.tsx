@@ -1,9 +1,15 @@
 import styled, { keyframes } from "styled-components";
+import { ContentBox } from "@/components/common/commonStyle";
+import Slide from "@/components/project/Slide";
 
 export default function Project() {
   return (
     <ProjectWrap>
-      <ProjectContent>Project Page</ProjectContent>
+      <ContentBox>
+        <ProjectContent>
+          <Slide />
+        </ProjectContent>
+      </ContentBox>
     </ProjectWrap>
   );
 }
@@ -32,7 +38,6 @@ const ProjectWrap = styled.section`
 `;
 
 const ProjectContent = styled.div`
-  font-size: 10rem;
-  color: white;
-  text-align: center;
+  height: 100%;
+  width: 100%;
 `;
