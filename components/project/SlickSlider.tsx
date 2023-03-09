@@ -1,4 +1,4 @@
-import { Fragment, ReactNode } from "react";
+import { Fragment } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 
