@@ -98,6 +98,7 @@ const WebHeader = styled.nav`
   flex-wrap: wrap;
   padding: 2.4rem;
   box-sizing: border-box;
+  z-index: 100;
 `;
 
 interface ControllerProps {
