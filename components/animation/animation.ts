@@ -60,6 +60,16 @@ export const slideUp = keyframes`
 }
 `;
 
+export const shotSlideDown = keyframes`
+0%{
+    transform: translateY(-2rem);
+    opacity: 0;
+}
+100%{
+    transform: translateY(0px);
+    opacity: 1;
+}`;
+
 export const slideDown = keyframes`
 0% {
     transform: translateY(-8rem);
