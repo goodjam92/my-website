@@ -1,13 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { fadeIn, fadeOut } from "../animation/animation";
 import ImageSlickSlider from "./ImageSlickSlider";
 
 interface SlideRightContentProps {
   projectImages: Array<string>;
+  localVisible: boolean;
 }
 
 export default function SlideRightContent({
   projectImages,
+  localVisible,
 }: SlideRightContentProps) {
   return (
     <RightContentWrap>
