@@ -68,6 +68,7 @@ const SlideContentWrap = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
   box-sizing: border-box;
   gap: 4rem;
