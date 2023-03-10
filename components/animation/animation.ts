@@ -2,7 +2,7 @@ import { keyframes } from "styled-components";
 
 export const fadeInFromLeft = keyframes`
   0%{
-    transform: translateX(-30rem);
+    transform: translateX(-10rem);
     opacity: 0;
     }
   100% {
