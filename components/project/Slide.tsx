@@ -2,6 +2,7 @@ import styled from "styled-components";
 import SlickSlider from "./SlickSlider";
 import SlideRightContent from "./SlideRightContent";
 import { WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
+import SlideLeftContent from "./SlideLeftContent";
 
 interface SlideProps {
   visible: boolean;
@@ -63,10 +64,4 @@ const SlideContentWrap = styled.div`
   padding: 2rem;
   box-sizing: border-box;
   gap: 4rem;
-`;
-
-const SlideLeftContent = styled.div`
-  width: 50%;
-  height: 100%;
-  background-color: white;
 `;
