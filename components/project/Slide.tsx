@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
+import { WBS_PROJECT_TEXT } from "@/hooks/TextConstant";
 import SlickSlider from "./SlickSlider";
 import SlideRightContent from "./SlideRightContent";
-import { WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
 import SlideLeftContent from "./SlideLeftContent";
 
 interface SlideProps {
@@ -15,7 +16,10 @@ export default function Slide({ visible }: SlideProps) {
         <SlickSlider>
           <SlideList>
             <SlideContentWrap>
-              <SlideLeftContent />
+              <SlideLeftContent
+                projectInfo={WBS_PROJECT_TEXT}
+                visible={visible}
+              />
               <SlideRightContent
                 projectImages={WHICH_BEACH_SEARCH}
                 visible={visible}
@@ -24,7 +28,10 @@ export default function Slide({ visible }: SlideProps) {
           </SlideList>
           <SlideList>
             <SlideContentWrap>
-              <SlideLeftContent />
+              <SlideLeftContent
+                projectInfo={WBS_PROJECT_TEXT}
+                visible={visible}
+              />
               <SlideRightContent projectImages={[]} visible={visible} />
             </SlideContentWrap>
           </SlideList>
