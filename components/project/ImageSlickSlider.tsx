@@ -10,7 +10,7 @@ export default function ImageSlickSlider(props: any) {
     infinite: true,
     autoplay: true,
     speed: 600,
-    autoplaySpeed: 2200,
+    autoplaySpeed: 2500,
     cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
