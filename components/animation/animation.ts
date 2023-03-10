@@ -80,3 +80,17 @@ export const slideDown = keyframes`
     opacity: 1;
 }
 `;
+
+export const cliptext = keyframes`
+  0%{
+      clip-path:polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+      transform:translateY(100%);
+      opacity: 1;
+  }
+  95%{
+      transform:translateY(0%);
+  }
+  100%{
+      clip-path:polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
+      opacity: 1;
+  }`;
