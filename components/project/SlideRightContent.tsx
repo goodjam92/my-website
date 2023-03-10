@@ -44,6 +44,7 @@ const RightSlideContent = styled.div`
 const ImageSlideContainer = styled.div`
   height: 100%;
   padding: 3.2rem;
+  box-sizing: border-box;
   text-align: center;
 `;
 
