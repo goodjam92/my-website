@@ -35,23 +35,20 @@ const SlideArea = styled.div`
     display: inline-block;
     margin: 0 auto;
   }
-  z-index: 100;
 `;
 
 const SlideContent = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-const SlideList = styled.ul`
+const SlideList = styled.div`
   height: 60rem;
-  list-style: none;
   padding: 0;
 `;
 
-const SlideContentWrap = styled.li`
+const SlideContentWrap = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
