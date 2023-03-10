@@ -19,8 +19,6 @@ export default function SlideLeftContent({
   projectInfo,
   visible,
 }: SlideLeftContentProps) {
-  const { DETAIL } = projectInfo;
-
   return (
     <LeftContentWrap visible={visible}>
       <RightSlideContent>
@@ -34,7 +32,7 @@ export default function SlideLeftContent({
           {projectInfo.SIMPLE}
         </ProjectText>
         <ProjectDescription>
-          {DETAIL.map((text, index) => (
+          {projectInfo.DETAIL.map((text, index) => (
             <DescriptionText visible={visible} delay={index + 1.75} key={text}>
               {text}
             </DescriptionText>
