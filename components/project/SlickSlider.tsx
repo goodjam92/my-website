@@ -8,7 +8,7 @@ export default function SlickSlider(props: any) {
   const setting = {
     dots: false,
     speed: 800,
-    draggable: true,
+    draggable: false,
     infinite: false,
     centerMode: true,
     centerPadding: "0",
