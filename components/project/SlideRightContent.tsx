@@ -1,19 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import styled, { css } from "styled-components";
-import { fadeIn, fadeOut } from "../animation/animation";
+import { VisibleProps } from "@/model/VisibleProps";
+import { fadeInFromRight, fadeOut } from "../animation/animation";
 import ImageSlickSlider from "./ImageSlickSlider";
 
 interface SlideRightContentProps {
   projectImages: Array<string>;
-  localVisible: boolean;
+  visible: boolean;
 }
 
 export default function SlideRightContent({
   projectImages,
-  localVisible,
+  visible,
 }: SlideRightContentProps) {
   return (
-    <RightContentWrap>
+    <RightContentWrap visible={visible}>
       <RightSlideContent>
         <ImageSlickSlider>
           {projectImages.map((item) => (
@@ -27,12 +28,20 @@ export default function SlideRightContent({
   );
 }
 
-const RightContentWrap = styled.div`
+const RightContentWrap = styled.div<VisibleProps>`
   width: 40%;
   height: 100%;
   .slick-slide {
     margin: 0 auto;
   }
+  ${(props) =>
+    props.visible === true
+      ? css`
+          animation: ${fadeInFromRight} 1s linear forwards;
+        `
+      : css`
+          animation: ${fadeOut} 0.2s linear forwards;
+        `}
 `;
 
 const RightSlideContent = styled.div`

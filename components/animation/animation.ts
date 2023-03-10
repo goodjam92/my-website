@@ -11,6 +11,17 @@ export const fadeInFromLeft = keyframes`
   }
 `;
 
+export const fadeInFromRight = keyframes`
+  0%{
+    transform: translateX(10rem);
+    opacity: 0;
+    }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
 export const fadeIn = keyframes`
 0%{
   opacity: 0;

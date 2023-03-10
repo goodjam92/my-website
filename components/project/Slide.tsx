@@ -3,7 +3,11 @@ import SlickSlider from "./SlickSlider";
 import SlideRightContent from "./SlideRightContent";
 import { WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
 
-export default function Slide() {
+interface SlideProps {
+  visible: boolean;
+}
+
+export default function Slide({ visible }: SlideProps) {
   return (
     <SlideArea>
       <SlideContent>
@@ -11,13 +15,16 @@ export default function Slide() {
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent />
-              <SlideRightContent projectImages={WHICH_BEACH_SEARCH} />
+              <SlideRightContent
+                projectImages={WHICH_BEACH_SEARCH}
+                visible={visible}
+              />
             </SlideContentWrap>
           </SlideList>
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent />
-              <SlideRightContent projectImages={[]} />
+              <SlideRightContent projectImages={[]} visible={visible} />
             </SlideContentWrap>
           </SlideList>
         </SlickSlider>
