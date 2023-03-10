@@ -50,14 +50,12 @@ const RightSlideContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
 `;
 
 const ImageSlideContainer = styled.div`
   height: 100%;
-  padding: 3.2rem;
+  padding: 2.4rem;
   box-sizing: border-box;
-  text-align: center;
 `;
 
 const ImageItem = styled.img`
@@ -67,5 +65,5 @@ const ImageItem = styled.img`
   border: 0.1rem solid;
   border-color: #797979;
   border-radius: 0.2rem;
-  box-shadow: 8px 8px 4px #828282;
+  box-shadow: 0.4rem 0.4rem 0.4rem #828282;
 `;
