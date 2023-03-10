@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import SlickSlider from "./SlickSlider";
+import SlideRightContent from "./SlideRightContent";
+import { WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
 
 export default function Slide() {
   return (
@@ -9,13 +11,13 @@ export default function Slide() {
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent />
-              <SlideRightContent />
+              <SlideRightContent projectImages={WHICH_BEACH_SEARCH} />
             </SlideContentWrap>
           </SlideList>
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent />
-              <SlideRightContent />
+              <SlideRightContent projectImages={[]} />
             </SlideContentWrap>
           </SlideList>
         </SlickSlider>
@@ -61,12 +63,6 @@ const SlideContentWrap = styled.li`
 
 const SlideLeftContent = styled.div`
   width: 50%;
-  height: 100%;
-  background-color: white;
-`;
-
-const SlideRightContent = styled.div`
-  width: 40%;
   height: 100%;
   background-color: white;
 `;
