@@ -6,21 +6,14 @@ export default function ImageSlickSlider(props: any) {
   const { children } = props;
 
   const setting = {
-    dots: false,
-    speed: 800,
     fade: true,
+    infinite: true,
+    autoplay: true,
+    speed: 600,
+    autoplaySpeed: 2200,
+    cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: (
-      <NextButton>
-        <ButtonIcon src="/assets/image/right-arrow.png" />
-      </NextButton>
-    ),
-    prevArrow: (
-      <PrevButton>
-        <ButtonIcon src="/assets/image/left-arrow.png" />
-      </PrevButton>
-    ),
   };
   return (
     <Fragment>
@@ -34,14 +27,14 @@ const StyledSlider = styled(Slider)`
   height: 60rem;
   overflow: hidden;
   position: relative;
-  .slick-prev::before,
-  .slick-next::before {
+  cursor: pointer;
+  .slick-prev,
+  .slick-next {
     opacity: 0;
     display: none;
   }
   .slick-list {
     height: 100%;
-    object-fit: fill;
     display: flex;
     align-items: center;
   }
