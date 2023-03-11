@@ -1,31 +1,27 @@
 @font-face {
   font-family: "Rubik80sFade-Regular";
   font-weight: 400;
-  src: url("Rubik80sFade-Regular.ttf"), local("Rubik80sFade-Regular.ttf"),
-    format("truetype");
+  src: url("Rubik80sFade-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Audiowide-Regular";
   font-weight: 400;
-  src: url("Audiowide-Regular.ttf") local("Audiowide-Regular.ttf"),
-    format("truetype");
+  src: url("Audiowide-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Shrikhand-Regular";
   font-weight: 400;
-  src: url("Shrikhand-Regular.ttf") local("Shrikhand-Regular.ttf"),
-    format("truetype");
+  src: url("Shrikhand-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "CarterOne-Regular";
   font-weight: 400;
-  src: url("CarterOne-Regular.ttf") local("CarterOne-Regular.ttf"),
-    format("truetype");
+  src: url("CarterOne-Regular.ttf") format("truetype");
   font-display: swap;
 }
