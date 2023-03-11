@@ -53,14 +53,14 @@ const RightSlideContent = styled.div`
 `;
 
 const ImageSlideContainer = styled.div`
-  height: 100%;
   padding: 2.4rem;
   box-sizing: border-box;
 `;
 
 const ImageItem = styled.img`
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  display: block;
   margin: 0;
   border: 0.1rem solid;
   border-color: #797979;

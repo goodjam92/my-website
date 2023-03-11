@@ -23,8 +23,6 @@ export default function ImageSlickSlider(props: any) {
 }
 
 const StyledSlider = styled(Slider)`
-  max-width: 34rem;
-  height: 60rem;
   overflow: hidden;
   position: relative;
   cursor: pointer;

@@ -57,7 +57,7 @@ export default function SlideLeftContent({
 const LeftContentWrap = styled.div<VisibleProps>`
   width: 50%;
   height: fit-content;
-  padding: 3.2rem 3.2rem 1.2rem 3.2rem;
+  padding: 3.2rem;
   box-sizing: border-box;
   opacity: 0;
   ${(props) =>
