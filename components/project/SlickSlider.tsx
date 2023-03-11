@@ -16,12 +16,12 @@ export default function SlickSlider(props: any) {
     slidesToScroll: 1,
     nextArrow: (
       <NextButton>
-        <ButtonIcon src="/assets/image/right-arrow.png" />
+        <ButtonIcon src="/assets/image/right-arrow.png" alt="nextButton" />
       </NextButton>
     ),
     prevArrow: (
       <PrevButton>
-        <ButtonIcon src="/assets/image/left-arrow.png" />
+        <ButtonIcon src="/assets/image/left-arrow.png" alt="prevButton" />
       </PrevButton>
     ),
   };
