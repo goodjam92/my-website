@@ -16,3 +16,8 @@ export const ContentBox = styled.div`
   padding: 4rem;
   box-sizing: border-box;
 `;
+
+export const FlexRowBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
