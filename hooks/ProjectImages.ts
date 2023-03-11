@@ -7,3 +7,8 @@ export const WHICH_BEACH_SEARCH = [
   "/assets/image/whichbeachsearch/signIn.png",
   "/assets/image/whichbeachsearch/signUp.png",
 ];
+
+export const MY_WEB_SITE = [
+  "/assets/image/myWebsite/intro.png",
+  "/assets/image/myWebsite/about.png",
+];

@@ -32,4 +32,23 @@ export const WBS_PROJECT_TEXT: ProjectProps = {
     url: "https://whichbeachsearch.web.app",
   },
 };
+
+export const MY_WEB_PROJECT_TEXT: ProjectProps = {
+  TITLE: "MY WEBSITE",
+  PERIOD: "2023. 03",
+  SIMPLE: "포트폴리오 웹 사이트",
+  DETAIL: [
+    `- 개발자로써 저를 소개하기 위한 웹 사이트 입니다.`,
+    `- Full page로 제작되었으며, Next.js와 Styled Component를 주로 사용하여 제작되었습니다.`,
+    `- 반응형 웹으로 제작되어 모바일 또는 데스크탑 환경에서도 편하게 보실 수 있습니다.`,
+  ],
+  USE_SKILL: ["NextJS", "Styled Component", "Typescript", "Versel", "Threejs"],
+  GITHUB: {
+    repasitory: "",
+    url: "",
+  },
+  FOOTER: {
+    refType: "",
+    url: "",
+  },
 };
