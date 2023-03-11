@@ -9,6 +9,7 @@ import {
   shotSlideDown,
 } from "../animation/animation";
 import ProjectSkillText from "./ProjectSkillText";
+import ProjectFooter from "./ProjectFooter";
 
 interface SlideLeftContentProps {
   projectInfo: ProjectProps;
@@ -43,6 +44,10 @@ export default function SlideLeftContent({
             ))}
           </SkillTextWrap>
         </ProjectDescription>
+        <ProjectFooter
+          github={projectInfo.GITHUB}
+          footer={projectInfo.FOOTER}
+        />
       </RightSlideContent>
     </LeftContentWrap>
   );
