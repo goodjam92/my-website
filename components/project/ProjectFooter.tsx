@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import { VisibleProps } from "@/model/VisibleProps";
+import styled, { css } from "styled-components";
+import { fadeIn, fadeOut } from "../animation/animation";
 
 interface ProjectFooterProps {
   github: {
@@ -9,11 +11,16 @@ interface ProjectFooterProps {
     refType: string;
     url: string;
   };
+  visible: boolean;
 }
 
-export default function ProjectFooter({ github, footer }: ProjectFooterProps) {
+export default function ProjectFooter({
+  github,
+  footer,
+  visible,
+}: ProjectFooterProps) {
   return (
-    <ProjectFooterWrap>
+    <ProjectFooterWrap visible={visible}>
       {github.url === "" ? null : (
         <FooterContent>
           <ProjectFooterText>Github</ProjectFooterText>
@@ -34,13 +41,23 @@ export default function ProjectFooter({ github, footer }: ProjectFooterProps) {
   );
 }
 
-const ProjectFooterWrap = styled.div`
+const ProjectFooterWrap = styled.div<VisibleProps>`
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  opacity: 0;
+  ${(props) =>
+    props.visible === true
+      ? css`
+          animation: ${fadeIn} 1s linear forwards;
+          animation-delay: 5.5s;
+        `
+      : css`
+          animation: ${fadeOut} 0.2s linear forwards;
+        `}
 `;
 
 const FooterContent = styled.div`

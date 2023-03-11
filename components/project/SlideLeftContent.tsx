@@ -47,6 +47,7 @@ export default function SlideLeftContent({
         <ProjectFooter
           github={projectInfo.GITHUB}
           footer={projectInfo.FOOTER}
+          visible={visible}
         />
       </RightSlideContent>
     </LeftContentWrap>
