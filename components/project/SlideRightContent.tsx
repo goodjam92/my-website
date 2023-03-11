@@ -60,7 +60,6 @@ const ImageSlideContainer = styled.div`
 const ImageItem = styled.img`
   max-width: 100%;
   height: auto;
-  display: block;
   margin: 0;
   border: 0.1rem solid;
   border-color: #797979;
