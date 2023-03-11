@@ -50,7 +50,7 @@ export default function SlideLeftContent({
 
 const LeftContentWrap = styled.div<VisibleProps>`
   width: 50%;
-  height: 100%;
+  height: fit-content;
   padding: 3.2rem 3.2rem 1.2rem 3.2rem;
   box-sizing: border-box;
   opacity: 0;
@@ -97,6 +97,7 @@ const ProjectTitle = styled.h2<VisibleProps>`
 const ProjectText = styled.h3<VisibleProps>`
   font-size: 2rem;
   opacity: 0;
+  font-weight: 500;
   ${(props) =>
     props.visible === true
       ? css`
@@ -117,6 +118,7 @@ const ProjectDescription = styled.div`
 
 const DescriptionText = styled.h3<VisibleProps>`
   font-size: 1.6rem;
+  font-weight: 500;
   line-height: 1.4;
   opacity: 0;
   ${(props) =>
