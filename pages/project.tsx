@@ -62,7 +62,7 @@ const ProjectWrap = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #000000, #34144b, #17195b, #154a7c);
+  background: linear-gradient(-45deg, #000000, #1f1725, #2e2e2f, #1a232a);
   background-size: 400% 400%;
   animation: ${backgroundAnimate} 20s ease infinite;
 `;
