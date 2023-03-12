@@ -94,3 +94,15 @@ export const cliptext = keyframes`
       clip-path:polygon(0% 00%, 100% 0%, 100% 100%, 0% 100%);
       opacity: 1;
   }`;
+
+export const backgroundAnimate = keyframes`
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+`;

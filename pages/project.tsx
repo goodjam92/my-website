@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { ContentBox } from "@/components/common/commonStyle";
 import Slide from "@/components/project/Slide";
 import { useEffect, useRef, useState } from "react";
+import { backgroundAnimate } from "@/components/animation/animation";
 
 export default function Project() {
   const projectRef = useRef<HTMLDivElement>(null);
@@ -44,17 +45,6 @@ export default function Project() {
   );
 }
 
-const backgroundAnimate = keyframes`
-  0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-`;
 
 const ProjectWrap = styled.section`
   width: 100%;
