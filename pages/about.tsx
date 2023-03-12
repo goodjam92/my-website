@@ -62,7 +62,7 @@ export default function About() {
 const AboutWrap = styled.section`
   width: 100%;
   min-height: 100%;
-  background: url("/assets/image/about-bg.jpeg") 50% 50% no-repeat fixed;
+  background-color: #06769b;
   background-size: cover;
   display: flex;
   align-items: center;
