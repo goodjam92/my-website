@@ -1,7 +1,7 @@
-import styled, { keyframes } from "styled-components";
-import { ContentBox } from "@/components/common/commonStyle";
-import Slide from "@/components/project/Slide";
 import { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import Slide from "@/components/project/Slide";
+import { ContentBox } from "@/components/common/commonStyle";
 import { backgroundAnimate } from "@/components/animation/animation";
 
 export default function Project() {
@@ -44,7 +44,6 @@ export default function Project() {
     </ProjectWrap>
   );
 }
-
 
 const ProjectWrap = styled.section`
   width: 100%;
