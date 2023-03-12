@@ -9,19 +9,19 @@ import Contact from "./contact";
 export default function Home() {
   return (
     <FullPage controls={NavBar}>
-      <Slide style={{ minHeight: "100vh" }}>
+      <Slide>
         <Intro />
       </Slide>
-      <Slide style={{ minHeight: "100vh" }}>
+      <Slide>
         <About />
       </Slide>
-      <Slide style={{ minHeight: "100vh" }}>
+      <Slide>
         <Project />
       </Slide>
-      <Slide style={{ minHeight: "100vh" }}>
+      <Slide>
         <Career />
       </Slide>
-      <Slide style={{ minHeight: "100vh" }}>
+      <Slide>
         <Contact />
       </Slide>
     </FullPage>
