@@ -109,7 +109,6 @@ const Controller = styled.div<ControllerProps>`
   width: 100%;
   left: 0;
   top: 0;
-  color: white;
   background-color: transparent;
   display: flex;
   justify-content: space-between;

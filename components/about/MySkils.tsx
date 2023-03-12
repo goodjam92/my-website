@@ -58,7 +58,7 @@ const ListItem = styled.li<ListItemProps>`
   font-family: "CarterOne-Regular";
   position: relative;
   color: ${(props) =>
-    props.selectedSkill === props.text ? "#b201a3" : "transparent"};
+    props.selectedSkill === props.text ? "#3e3d3e" : "transparent"};
   text-shadow: ${(props) =>
     props.selectedSkill === props.text ? "0.1rem 0.1rem 0.2rem white" : "none"};
   ::after {
@@ -78,7 +78,7 @@ const ListItem = styled.li<ListItemProps>`
           width: 0;
         }
         100% {
-          color: #b201a3;
+          color: #323232;
           text-shadow: 0.1rem 0.1rem 0.2rem white;
           width: 100%;
         }
