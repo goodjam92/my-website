@@ -28,9 +28,8 @@ const ContactWrap = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #303030, #454545, #36363a, #343536);
-  background-size: 400% 400%;
-  animation: ${backgroundAnimate} 20s ease infinite;
+  background: url("/assets/image/contact-background.jpg") 50% 50% no-repeat;
+  background-size: cover;
 `;
 
 const ContactLeftContent = styled.div`
