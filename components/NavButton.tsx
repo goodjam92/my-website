@@ -24,9 +24,8 @@ export default function NavButton({
 }
 
 const NavItemContainer = styled.li`
-  width: 10.8rem;
+  width: 14.2rem;
   height: 4.8rem;
-  font-size: 1.6rem;
   list-style: none;
 `;
 
@@ -47,8 +46,8 @@ const NavItem = styled.button<NavItemProps>`
   background-color: ${(props) =>
     props.index === parseInt(props.name) ? "tomato" : "transparent"};
   &:hover {
-    font-size: 2.2rem;
-    transition-duration: 0.4s;
+    font-size: 2.1rem;
     text-decoration: underline;
+    transition-duration: 0.4s;
   }
 `;
