@@ -1,22 +1,22 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { ContentBox, FlexRowBox } from "@/components/common/commonStyle";
+import { FlexRowBox } from "@/components/common/commonStyle";
 import ContactRightSection from "@/components/contact/ContactRightSection";
 import ContactLeftSection from "@/components/contact/ContactLeftSection";
-import { backgroundAnimate } from "@/components/animation/animation";
 
 export default function Contact() {
+  const [ishoverInfo, setIsHoverInfo] = useState<string>("");
+
   return (
     <ContactWrap>
-      <ContentBox>
+      <ContactContentBox>
         <FlexRowBox>
-          <ContactLeftContent>
-            <ContactLeftSection />
-          </ContactLeftContent>
-          <ContactRightContent>
+          <ContactContent>
+            <ContactLeftSection setIsHoverInfo={setIsHoverInfo} />
             <ContactRightSection />
-          </ContactRightContent>
+          </ContactContent>
         </FlexRowBox>
-      </ContentBox>
+      </ContactContentBox>
     </ContactWrap>
   );
 }
@@ -32,14 +32,20 @@ const ContactWrap = styled.section`
   background-size: cover;
 `;
 
-const ContactLeftContent = styled.div`
-  width: 70%;
+const ContactContentBox = styled.div`
+  max-width: 88rem;
   height: 100%;
-  background-color: red;
+  margin-left: 10rem;
+  padding: 2rem;
+  box-sizing: border-box;
 `;
 
-const ContactRightContent = styled.div`
-  margin-left: 4rem;
-  min-width: 36rem;
-  height: 100%;
+const ContactContent = styled.div`
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: blur(0.4rem);
 `;
