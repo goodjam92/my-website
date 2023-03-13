@@ -3,37 +3,15 @@ import styled from "styled-components";
 import { CONTACT_TEXT } from "@/hooks/TextConstant";
 import ContactInfo from "./ContactInfo";
 
-interface ContactLeftSectionProps {
-  setIsHoverInfo: Dispatch<SetStateAction<string>>;
-}
-
-export default function ContactLeftSection({
-  setIsHoverInfo,
-}: ContactLeftSectionProps) {
+export default function ContactLeftSection() {
   return (
     <LeftSectionWrap>
       <LeftSectionHeader>Contact Me</LeftSectionHeader>
       <LeftSectionItem>
-        <ContactInfo
-          info="email"
-          text={CONTACT_TEXT.email}
-          setIsHoverInfo={setIsHoverInfo}
-        />
-        <ContactInfo
-          info="tell"
-          text={CONTACT_TEXT.hp}
-          setIsHoverInfo={setIsHoverInfo}
-        />
-        <ContactInfo
-          info="github"
-          text={CONTACT_TEXT.github}
-          setIsHoverInfo={setIsHoverInfo}
-        />
-        <ContactInfo
-          info="blog"
-          text={CONTACT_TEXT.blog}
-          setIsHoverInfo={setIsHoverInfo}
-        />
+        <ContactInfo info="email" text={CONTACT_TEXT.email} />
+        <ContactInfo info="tell" text={CONTACT_TEXT.hp} />
+        <ContactInfo info="github" text={CONTACT_TEXT.github} />
+        <ContactInfo info="blog" text={CONTACT_TEXT.blog} />
       </LeftSectionItem>
     </LeftSectionWrap>
   );
@@ -44,7 +22,7 @@ const LeftSectionWrap = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 44rem;
-  min-width: 44rem;
+  min-width: 40rem;
   padding: 2.8rem;
   box-sizing: border-box;
   color: white;
@@ -52,7 +30,7 @@ const LeftSectionWrap = styled.div`
 `;
 
 const LeftSectionHeader = styled.h2`
-  font-size: 2rem;
+  font-size: 2.8rem;
   text-align: center;
   font-family: "Audiowide-Regular";
 `;
