@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { VisibleProps } from "@/model/VisibleProps";
-import { ContentBox, FlexRowBox } from "@/components/common/commonStyle";
+import { ContentBox, FlexBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
 import Description from "@/components/about/Description";
 import { fadeIn, fadeOut } from "@/components/animation/animation";
@@ -42,7 +42,7 @@ export default function About() {
   return (
     <AboutWrap ref={aboutRef}>
       <ContentBox>
-        <FlexRowBox>
+        <FlexBox>
           <LeftContent>
             <MySkils
               selectedSkill={selectedSkill}
@@ -53,7 +53,7 @@ export default function About() {
           <RightContent visible={localVisible}>
             <Description selectedSkill={selectedSkill} />
           </RightContent>
-        </FlexRowBox>
+        </FlexBox>
       </ContentBox>
     </AboutWrap>
   );

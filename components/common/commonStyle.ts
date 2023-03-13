@@ -17,7 +17,7 @@ export const ContentBox = styled.div`
   box-sizing: border-box;
 `;
 
-export const FlexRowBox = styled.div`
+export const FlexBox = styled.div`
   display: flex;
   align-items: center;
 `;

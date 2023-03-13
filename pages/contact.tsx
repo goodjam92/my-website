@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { FlexRowBox } from "@/components/common/commonStyle";
+import { FlexBox } from "@/components/common/commonStyle";
 import ContactRightSection from "@/components/contact/ContactRightSection";
 import ContactLeftSection from "@/components/contact/ContactLeftSection";
 import { VisibleProps } from "@/model/VisibleProps";
@@ -38,12 +38,12 @@ export default function Contact() {
   return (
     <ContactWrap ref={contactRef} visible={localVisible}>
       <ContactContentBox>
-        <FlexRowBox>
+        <FlexBox>
           <ContactContent>
             <ContactLeftSection />
             <ContactRightSection />
           </ContactContent>
-        </FlexRowBox>
+        </FlexBox>
       </ContactContentBox>
     </ContactWrap>
   );
