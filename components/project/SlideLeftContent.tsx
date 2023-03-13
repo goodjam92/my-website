@@ -34,7 +34,7 @@ export default function SlideLeftContent({
         </ProjectText>
         <ProjectDescription>
           {projectInfo.DETAIL.map((text, index) => (
-            <DescriptionText visible={visible} delay={index + 1.75} key={text}>
+            <DescriptionText visible={visible} delay={index + 1.5} key={text}>
               {text}
             </DescriptionText>
           ))}
