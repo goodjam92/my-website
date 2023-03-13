@@ -30,7 +30,7 @@ export default function NavBar({
             }}
             slideIndex={getCurrentSlideIndex}
             buttonIndex="1"
-            buttonText="About"
+            buttonText="<About />"
           />
           <NavButton
             onClick={() => {
@@ -38,7 +38,7 @@ export default function NavBar({
             }}
             slideIndex={getCurrentSlideIndex}
             buttonIndex="2"
-            buttonText="Project"
+            buttonText="<Project />"
           />
           <NavButton
             onClick={() => {
@@ -46,7 +46,7 @@ export default function NavBar({
             }}
             slideIndex={getCurrentSlideIndex}
             buttonIndex="3"
-            buttonText="Career"
+            buttonText="<Career />"
           />
           <NavButton
             onClick={() => {
@@ -54,7 +54,7 @@ export default function NavBar({
             }}
             slideIndex={getCurrentSlideIndex}
             buttonIndex="4"
-            buttonText="Contact"
+            buttonText="<Contact />"
           />
         </ContentContainer>
       </Controller>
@@ -121,10 +121,10 @@ const HomeContainer = styled.div`
   height: 100%;
   width: 100%;
 `;
+
 const ContentContainer = styled.ul`
   display: flex;
   align-items: center;
   margin: 0;
+  gap: 0.4rem;
 `;
-
-//   background-color: ${(props) => (props.index === 0 ? "white" : "transparent")};
