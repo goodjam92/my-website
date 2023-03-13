@@ -7,23 +7,12 @@ import { MdAlternateEmail } from "react-icons/md";
 interface ContactInfoProps {
   info: "github" | "tell" | "blog" | "email";
   text: string;
-  setIsHoverInfo: Dispatch<SetStateAction<string>>;
 }
 
-export default function ContactInfo({
-  info,
-  text,
-  setIsHoverInfo,
-}: ContactInfoProps) {
-  const onHoverInfoItem = (event: any) => {
-    setIsHoverInfo(event.target.id);
-  };
-
+export default function ContactInfo({ info, text }: ContactInfoProps) {
   const infoIconRendering = (info: string) => {
     const render = () => {
       switch (info) {
-        case "github":
-          return <BsGithub style={{ margin: 0, width: 36, height: 36 }} />;
         case "blog":
           return <SiBloglovin style={{ margin: 0, width: 32, height: 32 }} />;
         case "tell":
@@ -34,6 +23,8 @@ export default function ContactInfo({
           return (
             <MdAlternateEmail style={{ margin: 0, width: 36, height: 36 }} />
           );
+        case "github":
+          return <BsGithub style={{ margin: 0, width: 36, height: 36 }} />;
         default:
           break;
       }
@@ -68,7 +59,7 @@ export default function ContactInfo({
   };
 
   return (
-    <InfoContainer onMouseOver={onHoverInfoItem} id={info}>
+    <InfoContainer id={info}>
       <InfoIcon>{infoIconRendering(info)}</InfoIcon>
       {infoTextRendering(info)}
     </InfoContainer>
@@ -93,7 +84,7 @@ const InfoIcon = styled.div`
 
 const InfoText = styled.a`
   font-size: 2rem;
-  width: 80%;
+  width: fit-content;
 
   text-decoration: none;
   color: white;
