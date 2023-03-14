@@ -1,6 +1,5 @@
-import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
-import { BsGithub, BsPhoneVibrate } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { SiBloglovin } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
 
@@ -67,22 +66,29 @@ const InfoContainer = styled.div`
   border-radius: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const InfoIcon = styled.div`
   width: 20%;
   height: auto;
   text-align: center;
+  border-right: 2px solid;
 `;
 
 const InfoText = styled.a`
   font-size: 2rem;
-  width: fit-content;
-
+  margin-left: 2rem;
+  width: 100%;
   text-decoration: none;
   color: white;
   :visited {
     text-decoration: none;
     color: white;
+  }
+  :hover {
+    font-size: 2.2rem;
+    transition: 0.4s;
+    text-decoration: underline;
   }
 `;

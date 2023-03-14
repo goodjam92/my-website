@@ -85,6 +85,8 @@ export const OTHER_CAREER_TEXT = {
 };
 
 export const CONTACT_TEXT = {
+  thanks:
+    "저의 포트폴리오를 끝까지 지켜봐주셔서 감사합니다.\n메일로 연락주시면 빠르게 회신드리도록 하겠습니다.",
   email: "devgoozz@gmail.com",
   github: "github.com/goodjam92",
   blog: "velog.io/@goodjam92",

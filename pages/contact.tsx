@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
-import { FlexBox } from "@/components/common/commonStyle";
-import ContactRightSection from "@/components/contact/ContactRightSection";
-import ContactLeftSection from "@/components/contact/ContactLeftSection";
 import { VisibleProps } from "@/model/VisibleProps";
+import ContactContainer from "@/components/contact/ContactContainer";
 
 export default function Contact() {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -38,12 +36,7 @@ export default function Contact() {
   return (
     <ContactWrap ref={contactRef} visible={localVisible}>
       <ContactContentBox>
-        <FlexBox>
-          <ContactContent>
-            <ContactLeftSection />
-            <ContactRightSection />
-          </ContactContent>
-        </FlexBox>
+        <ContactContainer />
       </ContactContentBox>
     </ContactWrap>
   );
@@ -75,19 +68,12 @@ const ContactWrap = styled.section<VisibleProps>`
 `;
 
 const ContactContentBox = styled.div`
-  max-width: 88rem;
-  height: 100%;
   margin-left: 10rem;
   padding: 2rem;
   box-sizing: border-box;
-`;
-
-const ContactContent = styled.div`
-  width: 100%;
-  height: fit-content;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: transparent;
   backdrop-filter: blur(0.4rem);
+  border-radius: 0.8rem;
 `;
