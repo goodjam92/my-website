@@ -4,7 +4,11 @@ import { VisibleProps } from "@/model/VisibleProps";
 import { ContentBox, FlexBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
 import Description from "@/components/about/Description";
-import { fadeIn, fadeOut } from "@/components/animation/animation";
+import {
+  backgroundAnimate,
+  fadeIn,
+  fadeOut,
+} from "@/components/animation/animation";
 import { Spacer } from "@/components/Spacer";
 
 export default function About() {
@@ -62,8 +66,9 @@ export default function About() {
 const AboutWrap = styled.section`
   width: 100%;
   min-height: 100%;
-  background-color: #06769b;
-  background-size: cover;
+  background: linear-gradient(-45deg, #06769b, #068c9b, #0c638f, #06769b);
+  background-size: 400% 400%;
+  animation: ${backgroundAnimate} 20s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +85,7 @@ const RightContent = styled.div<VisibleProps>`
   border-radius: 1.6rem;
   box-sizing: border-box;
   background-color: rgba(255, 255, 192, 0.1);
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(0.4rem);
   box-shadow: 0.2rem 0.7rem 1.5rem 0.8rem rgba(0, 0, 0, 0.3);
   opacity: 0;
   z-index: 1;
