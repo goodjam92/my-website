@@ -53,6 +53,37 @@ export const MY_WEB_PROJECT_TEXT: ProjectProps = {
   },
 };
 
+export const CAREER_TEXT = {
+  COMPANY: "위노아이 (Winoi)",
+  PERIOD: " 2022.11 ~ 2023.02 ",
+  WORK: [
+    "- React 기반 웹 FRONT END 구현",
+    "- 서비스 사용자의 Needs에 맞게 UI 구현 및 비즈니스 로직 구현",
+    "- 서버와의 실시간 데이터 연동 기능 구현",
+  ],
+};
+
+export const OTHER_CAREER_TEXT = {
+  SOLKO: {
+    COMPANY: "솔코 (Solko)",
+    PERIOD: " 2020.03 ~ 2022.10 ",
+    WORK: [
+      "- 3D 설계 프로그램 기술 지원 및 교육 담당",
+      "- 고객 맞춤형 설계 표준화 가이드",
+      "- 기술 자료 작성 및 기술 Webinar 발표",
+    ],
+  },
+  YSTT: {
+    COMPANY: "와이에스썸텍 (YSTT)",
+    PERIOD: " 2016.12 ~ 2019.12 ",
+    WORK: [
+      "- 열처리 장비 설계 업무",
+      "- 장비 시운전 및 장비 메뉴얼 작성",
+      "- 생산 부서와의 협업으로 장비 생산성 향상 도모",
+    ],
+  },
+};
+
 export const CONTACT_TEXT = {
   email: "devgoozz@gmail.com",
   hp: "010-2497-2770",
