@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 import { CONTACT_TEXT } from "@/hooks/TextConstant";
 import ContactInfo from "./ContactInfo";
