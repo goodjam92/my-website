@@ -86,7 +86,6 @@ export const OTHER_CAREER_TEXT = {
 
 export const CONTACT_TEXT = {
   email: "devgoozz@gmail.com",
-  hp: "010-2497-2770",
   github: "github.com/goodjam92",
   blog: "velog.io/@goodjam92",
 };

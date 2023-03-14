@@ -8,7 +8,6 @@ export default function ContactLeftSection() {
       <LeftSectionHeader>Contact Me</LeftSectionHeader>
       <LeftSectionItem>
         <ContactInfo info="email" text={CONTACT_TEXT.email} />
-        <ContactInfo info="tell" text={CONTACT_TEXT.hp} />
         <ContactInfo info="github" text={CONTACT_TEXT.github} />
         <ContactInfo info="blog" text={CONTACT_TEXT.blog} />
       </LeftSectionItem>

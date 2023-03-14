@@ -5,7 +5,7 @@ import { SiBloglovin } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
 
 interface ContactInfoProps {
-  info: "github" | "tell" | "blog" | "email";
+  info: "github" | "blog" | "email";
   text: string;
 }
 
@@ -15,10 +15,6 @@ export default function ContactInfo({ info, text }: ContactInfoProps) {
       switch (info) {
         case "blog":
           return <SiBloglovin style={{ margin: 0, width: 32, height: 32 }} />;
-        case "tell":
-          return (
-            <BsPhoneVibrate style={{ margin: 0, width: 36, height: 36 }} />
-          );
         case "email":
           return (
             <MdAlternateEmail style={{ margin: 0, width: 36, height: 36 }} />
@@ -42,9 +38,6 @@ export default function ContactInfo({ info, text }: ContactInfoProps) {
               {text}
             </InfoText>
           );
-        case "tell":
-          return <InfoText href={`tel:${text}`}>{text}</InfoText>;
-
         case "email":
           return (
             <InfoText href={`mailto:${text}`} target="_blank">
