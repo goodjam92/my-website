@@ -18,7 +18,7 @@ export const ContentBox = styled.div`
   box-sizing: border-box;
   transition: all 0.5s;
   ${media.large`
-  min-width: 104rem;
+  min-width: 108rem;
   margin: 0;
 `}
   ${media.medium`
