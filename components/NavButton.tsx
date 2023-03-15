@@ -1,5 +1,4 @@
-import { useEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 interface NavButtonProps {
   slideIndex: () => number;
@@ -18,6 +17,7 @@ export default function NavButton({
     <NavItemContainer>
       <NavItem index={slideIndex()} name={buttonIndex} onClick={onClick}>
         {buttonText}
+        <NavItemStyle index={slideIndex()} name={buttonIndex} />
       </NavItem>
     </NavItemContainer>
   );
@@ -41,13 +41,40 @@ const NavItem = styled.button<NavItemProps>`
   font-size: 2rem;
   font-family: "Audiowide-Regular";
   border-radius: 1rem;
-  color: ${(props) =>
-    props.index === parseInt(props.name) ? "black" : "white"};
-  background-color: ${(props) =>
-    props.index === parseInt(props.name) ? "tomato" : "transparent"};
+  position: relative;
+  color: white;
   &:hover {
     font-size: 2.1rem;
     text-decoration: underline;
     transition-duration: 0.4s;
+  }
+`;
+
+const animationColor = keyframes`
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10.8rem;
+  }
+`;
+
+const NavItemStyle = styled.div<NavItemProps>`
+  position: absolute;
+  height: 1.6rem;
+  top: 48%;
+  left: 20%;
+  z-index: -2;
+  background-color: ${(props) =>
+    props.index === parseInt(props.name) ? "tomato" : "transparent"};
+  ${(props) =>
+    props.index === parseInt(props.name)
+      ? css`
+          animation: ${animationColor} 0.3s linear forwards;
+        `
+      : "transparent"};
+  &:hover {
+    background-color: "tomato";
+    width: 100%;
   }
 `;

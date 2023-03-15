@@ -126,5 +126,5 @@ const ContentContainer = styled.ul`
   display: flex;
   align-items: center;
   margin: 0;
-  gap: 0.4rem;
+  gap: 1.2rem;
 `;
