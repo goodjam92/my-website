@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 
 const MY_SKILL: Array<string> = [
-  `FrontEnd`,
+  `Front-End`,
   "Co-op & Versioning",
   "Library & Tool",
   "Deploy & BackEnd",

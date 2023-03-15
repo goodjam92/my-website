@@ -54,7 +54,7 @@ export const CAREER_TEXT = {
   COMPANY: "위노아이 (Winoi)",
   PERIOD: " 2022.11 ~ 2023.02 ",
   WORK: [
-    "- React 기반 웹 FRONT END 구현",
+    "- React 기반 웹 Front-End 구현",
     "- 서비스 사용자의 Needs에 맞게 UI 구현 및 비즈니스 로직 구현",
     "- 서버와의 실시간 데이터 연동 기능 구현",
   ],
