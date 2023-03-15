@@ -1,10 +1,7 @@
 import { ProjectProps } from "@/model/ProjectProps";
 
-export const INTRO_PAGE = {
-  LEFT_TOP_TEXT: "안녕하세요! 🙋🏻‍♂️",
-  LEFT_MID_TEXT: "Front-end Developer",
-  LEFT_BOTTOM_TEXT: `구재모 입니다! :) `,
-};
+export const INTRO_TEXT =
+  "안녕하세요!👋\nFront-end Developer\n구재모 입니다! :)";
 
 export const WBS_PROJECT_TEXT: ProjectProps = {
   TITLE: "WHICH BEACH SEARCH",

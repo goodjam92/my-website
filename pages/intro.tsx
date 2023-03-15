@@ -1,15 +1,18 @@
-import { useEffect, useRef, useState } from "react";
-import styled, { css } from "styled-components";
-import { INTRO_PAGE } from "@/hooks/TextConstant";
-import { VisibleProps } from "@/model/VisibleProps";
-import { fadeOut, fadeInFromLeft } from "@/components/animation/animation";
+import { useEffect, useMemo, useRef, useState } from "react";
+import styled from "styled-components";
+import { INTRO_TEXT } from "@/hooks/TextConstant";
 import { ContentBox, InnerContainer } from "@/components/common/commonStyle";
-import { Spacer } from "@/components/Spacer";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
   const magicRef = useRef(null);
   const [localVisible, setLocalVisible] = useState<boolean>(false);
+  const [landingText, setLandingText] = useState<string>("");
+  const [textIndex, setTextIndex] = useState<number>(0);
+
+  const completedText = useMemo(() => {
+    return INTRO_TEXT;
+  }, []);
 
   useEffect(() => {
     const magic: any = magicRef.current;
@@ -56,6 +59,27 @@ export default function Intro() {
     };
   }, [ref]);
 
+  useEffect(() => {
+    if (!localVisible) {
+      setTextIndex(0);
+      setLandingText("");
+      return;
+    }
+    const typingText = setInterval(() => {
+      if (textIndex === INTRO_TEXT.length) {
+        clearInterval(typingText);
+        return;
+      }
+
+      setLandingText(landingText + completedText[textIndex]);
+      setTextIndex(textIndex + 1);
+    }, 150);
+
+    return () => {
+      clearInterval(typingText);
+    };
+  }, [completedText, landingText, localVisible, textIndex]);
+
   return (
     <>
       <IntroWrap ref={ref}>
@@ -63,17 +87,7 @@ export default function Intro() {
         <InnerContainer>
           <ContentBox>
             <IntroTextContainer>
-              <IntroText visible={localVisible} delay={0.75}>
-                {INTRO_PAGE.LEFT_TOP_TEXT}
-              </IntroText>
-              <Spacer height={2} />
-              <IntroText visible={localVisible} delay={1.75}>
-                {INTRO_PAGE.LEFT_MID_TEXT}
-              </IntroText>
-              <Spacer height={2} />
-              <IntroText visible={localVisible} delay={2.5}>
-                {INTRO_PAGE.LEFT_BOTTOM_TEXT}
-              </IntroText>
+              <IntroText>{landingText}</IntroText>
             </IntroTextContainer>
           </ContentBox>
         </InnerContainer>
@@ -101,21 +115,13 @@ const IntroTextContainer = styled.div`
   justify-content: space-between;
 `;
 
-const IntroText = styled.h1<VisibleProps>`
+const IntroText = styled.h1`
   position: relative;
   font-size: 6rem;
   text-transform: uppercase;
+  white-space: pre-line;
+  line-height: 16rem;
   color: #fff;
-  opacity: 0;
-  ${(props) =>
-    props.visible === true
-      ? css`
-          animation: ${fadeInFromLeft} 0.5s linear forwards;
-          animation-delay: ${props.delay}s;
-        `
-      : css`
-          animation: ${fadeOut} 0.2s linear forwards;
-        `}
   z-index: 10;
 `;
 
