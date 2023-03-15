@@ -10,6 +10,7 @@ import {
   fadeOut,
 } from "@/components/animation/animation";
 import { Spacer } from "@/components/Spacer";
+import { media } from "@/styles/media";
 
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -46,18 +47,17 @@ export default function About() {
   return (
     <AboutWrap ref={aboutRef}>
       <ContentBox>
-        <FlexBox>
+        <AboutFlexBox>
           <LeftContent>
             <MySkils
               selectedSkill={selectedSkill}
               setselectedSkill={setselectedSkill}
             />
           </LeftContent>
-          <Spacer width={2} />
           <RightContent visible={localVisible}>
             <Description selectedSkill={selectedSkill} />
           </RightContent>
-        </FlexBox>
+        </AboutFlexBox>
       </ContentBox>
     </AboutWrap>
   );
@@ -74,8 +74,29 @@ const AboutWrap = styled.section`
   justify-content: center;
 `;
 
+const AboutFlexBox = styled(FlexBox)`
+  gap: 2rem;
+  ${media.large`
+  gap: 0.8;`}
+  ${media.medium`
+  gap: 6rem;
+`}
+  ${media.small`
+  gap: 4rem;
+`}
+`;
+
 const LeftContent = styled.div`
   width: fit-content;
+  transition: all 0.5s;
+  ${media.medium`
+  width: 60rem;
+  margin: 0;
+`}
+  ${media.small`
+  width: 48rem;
+  margin: 0;
+`}
 `;
 
 const RightContent = styled.div<VisibleProps>`
@@ -88,14 +109,29 @@ const RightContent = styled.div<VisibleProps>`
   backdrop-filter: blur(0.4rem);
   box-shadow: 0.2rem 0.7rem 1.5rem 0.8rem rgba(0, 0, 0, 0.3);
   opacity: 0;
-  z-index: 1;
   ${(props) =>
     props.visible === true
       ? css`
           animation: ${fadeIn} 0.5s linear forwards;
-          animation-delay: 1s;
+          animation-delay: 0.5s;
         `
       : css`
           animation: ${fadeOut} 0.1s linear forwards;
         `}
+  transition: all 0.5s;
+  ${media.large`
+  margin-left: 2rem;
+`}
+  ${media.medium`
+  min-width: 60rem;
+  max-width: 68rem;
+  margin: 0;
+  padding: 2rem;
+`}
+  ${media.small`
+  margin-top: 2rem;
+  min-width: 52rem;
+  max-width: 56rem;
+  padding: 0.8rem;
+`}
 `;

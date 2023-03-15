@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import styled from "styled-components";
 import { fadeIn } from "../animation/animation";
 
@@ -31,6 +32,12 @@ const MySkillLogoItem = styled.li<MySkillLogoItme>`
   position: relative;
   animation: ${fadeIn} 0.7s linear forwards;
   animation-delay: ${(props) => props.index * 0.5}s;
+  transition: all 0.5s;
+  ${media.small`
+  width: 9.6rem;
+  height: 9.6rem;
+  padding: 0.8rem;
+`}
 `;
 
 const MySkillLogoImage = styled.div<MySkillLogoItme>`

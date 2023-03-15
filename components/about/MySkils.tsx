@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 
@@ -42,6 +43,16 @@ const List = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   padding-left: 2rem;
+
+  ${media.medium`
+  min-height: 16rem;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap:wrap;
+  padding: 0;
+  margin-top: 4rem;
+  gap:4rem;
+`}
 `;
 
 interface ListItemProps {
@@ -87,4 +98,14 @@ const ListItem = styled.li<ListItemProps>`
       }
     }
   }
+
+  ${media.large`
+  font-size: 4.8rem;
+`}
+  ${media.medium`
+  font-size: 4rem
+`}
+  ${media.small`
+  font-size: 3.6rem 
+`}
 `;

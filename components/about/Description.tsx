@@ -4,6 +4,7 @@ import {
   FRONT_END_LOGO,
   LIBRARY_TOOL,
 } from "@/hooks/SkillList";
+import { media } from "@/styles/media";
 import styled from "styled-components";
 import MySkillLogo from "./MySkillLogo";
 
@@ -51,4 +52,10 @@ const DescriptionContent = styled.ul`
   flex-wrap: wrap;
   padding: 0;
   gap: 8rem;
+  ${media.medium`
+  gap: 6rem;
+`}
+  ${media.small`
+  gap: 4rem;
+`}
 `;
