@@ -12,7 +12,7 @@ export default function Symbol() {
         <ambientLight intensity={0.8} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         <SimbolComponent />
       </Canvas>
     </SymbolWrap>

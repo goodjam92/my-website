@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { media } from "@/styles/media";
 import { INTRO_TEXT } from "@/hooks/TextConstant";
 import {
   ContentBox,
@@ -7,7 +8,8 @@ import {
   InnerContainer,
 } from "@/components/common/commonStyle";
 import Symbol from "@/components/intro/Symbol";
-import { media } from "@/styles/media";
+import { fadeIn, fadeOut } from "@/components/animation/animation";
+import { VisibleProps } from "@/model/VisibleProps";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
@@ -96,8 +98,8 @@ export default function Intro() {
               <IntroLeftSection>
                 <IntroText>{landingText}</IntroText>
               </IntroLeftSection>
-              <IntroRightSection>
-                <Symbol />
+              <IntroRightSection visible={localVisible}>
+                {localVisible === true ? <Symbol /> : null}
               </IntroRightSection>
             </FlexBox>
           </ContentBox>
@@ -115,7 +117,7 @@ const IntroWrap = styled.section`
   justify-content: center;
   align-items: center;
   background: #1d1f20;
-  z-index: -99;
+  z-index: 0;
 `;
 
 const IntroText = styled.h1`
@@ -143,18 +145,28 @@ const IntroLeftSection = styled.section`
   ${media.large`
     width: 70%;
     transition: 0.5s;
-    margin-left: 3.6rem;
+    margin-left: 2.8rem;
+    margin-right: 1.2rem;
   `}
   ${media.small`
   width: 100%;
-  margin-left: 0;
+  margin: 0;
     `}
 `;
 
-const IntroRightSection = styled.section`
+const IntroRightSection = styled.section<VisibleProps>`
   height: 100%;
   width: fit-content;
-  z-index: 10;
+  z-index: 30;
+  opacity: 0;
+  ${(props) =>
+    props.visible === true
+      ? css`
+          animation: ${fadeIn} 2s linear forwards;
+        `
+      : css`
+          animation: ${fadeOut} 2s linear forwards;
+        `}
 `;
 
 const MagicScreen = styled.div`
