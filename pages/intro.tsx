@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import styled from "styled-components";
 import { INTRO_TEXT } from "@/hooks/TextConstant";
-import { ContentBox, InnerContainer } from "@/components/common/commonStyle";
+import {
+  ContentBox,
+  FlexBox,
+  InnerContainer,
+} from "@/components/common/commonStyle";
+import Symbol from "@/components/intro/Symbol";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
@@ -86,9 +91,14 @@ export default function Intro() {
         {localVisible === true ? <MagicScreen ref={magicRef} /> : null}
         <InnerContainer>
           <ContentBox>
-            <IntroTextContainer>
-              <IntroText>{landingText}</IntroText>
-            </IntroTextContainer>
+            <FlexBox>
+              <IntroLeftSection>
+                <IntroText>{landingText}</IntroText>
+              </IntroLeftSection>
+              <IntroRightSection>
+                <Symbol />
+              </IntroRightSection>
+            </FlexBox>
           </ContentBox>
         </InnerContainer>
       </IntroWrap>
@@ -107,14 +117,6 @@ const IntroWrap = styled.section`
   z-index: -99;
 `;
 
-const IntroTextContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
 const IntroText = styled.h1`
   position: relative;
   font-size: 6rem;
@@ -122,6 +124,17 @@ const IntroText = styled.h1`
   white-space: pre-line;
   line-height: 16rem;
   color: #fff;
+  z-index: 10;
+`;
+
+const IntroLeftSection = styled.section`
+  height: 100%;
+  width: 100%;
+`;
+
+const IntroRightSection = styled.section`
+  height: 100%;
+  width: fit-content;
   z-index: 10;
 `;
 
