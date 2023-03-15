@@ -19,20 +19,20 @@ export default function Career() {
       <ContentBox>
         <CareerFlexBox>
           <CareerCard onClick={onClickedCareerButton}>
-            <InfoCard>
+            <InfoFrontCard>
               <CareerHeadText>
                 Front End <br />
                 Developer
               </CareerHeadText>
-            </InfoCard>
+            </InfoFrontCard>
             <InfoBackCard>
               <DeveloperCard />
             </InfoBackCard>
           </CareerCard>
           <CareerCard onClick={onClickedCareerButton}>
-            <InfoCard>
+            <InfoFrontCard>
               <CareerHeadText>Other Career</CareerHeadText>
-            </InfoCard>
+            </InfoFrontCard>
             <InfoBackCard>
               <OtherCareerCard />
             </InfoBackCard>
@@ -56,9 +56,9 @@ const CareerWrap = styled.section`
 
 const CareerFlexBox = styled(FlexBox)`
   min-width: 100%;
-  height: 44rem;
+  height: 42rem;
   perspective: 1000px;
-  gap: 2rem;
+  gap: 4rem;
 `;
 
 const CareerCard = styled.div`
@@ -81,10 +81,7 @@ const CareerHeadText = styled.h2`
 const InfoCard = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 192, 0.1);
-  backdrop-filter: blur(0.4rem);
   border-radius: 2rem;
-  color: white;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -98,6 +95,15 @@ const InfoCard = styled.div`
   }
 `;
 
+const InfoFrontCard = styled(InfoCard)`
+  background: linear-gradient(-45deg, #06769b, #0c638f, #108491, #157fa2);
+  background-size: 400% 400%;
+  animation: ${backgroundAnimate} 20s ease infinite;
+  color: white;
+`;
+
 const InfoBackCard = styled(InfoCard)`
   transform: rotateY(180deg);
+  background-color: white;
+  color: black;
 `;
