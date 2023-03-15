@@ -77,7 +77,7 @@ const InfoIcon = styled.div`
 `;
 
 const InfoText = styled.a`
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-left: 2rem;
   width: 100%;
   text-decoration: none;
@@ -87,7 +87,7 @@ const InfoText = styled.a`
     color: white;
   }
   :hover {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     transition: 0.4s;
     text-decoration: underline;
   }
