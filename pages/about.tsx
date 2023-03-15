@@ -28,7 +28,7 @@ export default function About() {
       },
       {
         rootMargin: "0px",
-        threshold: 0.8,
+        threshold: 0.7,
       }
     );
     if (aboutRef.current) {

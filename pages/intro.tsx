@@ -52,7 +52,7 @@ export default function Intro() {
       },
       {
         rootMargin: "0px",
-        threshold: 0.2,
+        threshold: 0.9,
       }
     );
     if (ref.current) {
