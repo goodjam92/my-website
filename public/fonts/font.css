@@ -20,8 +20,15 @@
 }
 
 @font-face {
-  font-family: "CarterOne-Regular";
+  font-family: "FugazOne-Regular";
   font-weight: 400;
-  src: url("CarterOne-Regular.ttf") format("truetype");
+  src: url("FugazOne-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RussoOne-Regular";
+  font-weight: 400;
+  src: url("RussoOne-Regular.ttf") format("truetype");
   font-display: swap;
 }
