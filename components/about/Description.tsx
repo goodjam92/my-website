@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import {
   CO_OP_VERSIONING,
   DEPLOY_BACKEND,
@@ -5,7 +6,6 @@ import {
   LIBRARY_TOOL,
 } from "@/hooks/SkillList";
 import { media } from "@/styles/media";
-import styled from "styled-components";
 import MySkillLogo from "./MySkillLogo";
 
 interface DescriptionProps {

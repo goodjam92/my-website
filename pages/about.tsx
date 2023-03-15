@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { VisibleProps } from "@/model/VisibleProps";
+import { media } from "@/styles/media";
 import { ContentBox, FlexBox } from "@/components/common/commonStyle";
 import MySkils from "@/components/about/MySkils";
 import Description from "@/components/about/Description";
@@ -9,8 +10,6 @@ import {
   fadeIn,
   fadeOut,
 } from "@/components/animation/animation";
-import { Spacer } from "@/components/Spacer";
-import { media } from "@/styles/media";
 
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);

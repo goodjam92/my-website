@@ -1,6 +1,6 @@
-import { media } from "@/styles/media";
 import { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
+import { media } from "@/styles/media";
 
 const MY_SKILL: Array<string> = [
   `Front-End`,

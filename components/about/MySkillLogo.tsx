@@ -1,5 +1,5 @@
-import { media } from "@/styles/media";
 import styled from "styled-components";
+import { media } from "@/styles/media";
 import { fadeIn } from "../animation/animation";
 
 interface MySkillLogoProps {
