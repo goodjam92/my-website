@@ -20,8 +20,8 @@ export default function Symbol() {
 }
 
 const SymbolWrap = styled.div`
-  min-width: 32rem;
-  min-height: 32rem;
+  max-width: 24rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

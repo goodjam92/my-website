@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import styled from "styled-components";
 
 export const InnerContainer = styled.div`
@@ -15,9 +16,23 @@ export const ContentBox = styled.div`
   margin-right: 2rem;
   padding: 4rem;
   box-sizing: border-box;
+  transition: all 0.5s;
+  ${media.medium`
+  min-width: 100rem;
+  margin: 0;
+`}
+  ${media.small`
+  min-width: fit-content;
+  margin: 0;
+  padding: 0;
+    `}
 `;
 
 export const FlexBox = styled.div`
   display: flex;
   align-items: center;
+  transition: all 0.5s;
+  ${media.medium`
+  flex-direction: column;
+`}
 `;

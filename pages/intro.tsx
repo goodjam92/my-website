@@ -7,6 +7,7 @@ import {
   InnerContainer,
 } from "@/components/common/commonStyle";
 import Symbol from "@/components/intro/Symbol";
+import { media } from "@/styles/media";
 
 export default function Intro() {
   const ref = useRef<HTMLDivElement>(null);
@@ -125,11 +126,29 @@ const IntroText = styled.h1`
   line-height: 16rem;
   color: #fff;
   z-index: 10;
+  transition: all 0.5s;
+  ${media.medium`
+  font-size: 4.8rem;
+`}
+  ${media.small`
+    font-size: 3.6rem;
+    line-height: 10rem;
+    `}
 `;
 
 const IntroLeftSection = styled.section`
   height: 100%;
   width: 100%;
+  transition: all 0.5s;
+  ${media.large`
+    width: 70%;
+    transition: 0.5s;
+    margin-left: 3.6rem;
+  `}
+  ${media.small`
+  width: 100%;
+  margin-left: 0;
+    `}
 `;
 
 const IntroRightSection = styled.section`

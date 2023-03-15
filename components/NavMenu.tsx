@@ -1,4 +1,6 @@
+import { media } from "@/styles/media";
 import styled from "styled-components";
+import { fadeInFromLeft, fadeOutFromRight } from "./animation/animation";
 import HomeButton from "./HomeButton";
 import NavButton from "./NavButton";
 
@@ -75,6 +77,7 @@ const VerticalBar = styled.div<VerticalBarProps>`
   width: 0.2rem;
   border-radius: 0.1rem;
   transition-duration: 0.6s;
+  opacity: 0;
   background-color: ${(props) => {
     switch (props.index) {
       case 0:
@@ -85,8 +88,12 @@ const VerticalBar = styled.div<VerticalBarProps>`
         return "black";
     }
   }};
-
   z-index: 100;
+  animation: ${fadeInFromLeft} 1s linear forwards;
+
+  ${media.large`
+    animation: ${fadeOutFromRight} 0.5s linear forwards;
+  `}
 `;
 
 const WebHeader = styled.nav`
