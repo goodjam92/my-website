@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Rubik80sFade-Regular";
-  font-weight: 400;
-  src: url("Rubik80sFade-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Audiowide-Regular";
   font-weight: 400;
   src: url("Audiowide-Regular.ttf") format("truetype");

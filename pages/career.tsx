@@ -74,7 +74,7 @@ const CareerHeadText = styled.h2`
   font-size: 5.2rem;
   white-space: pre-line;
   text-align: center;
-  font-family: "CarterOne-Regular";
+  font-family: "RussoOne-Regular";
   font-weight: 400;
 `;
 
