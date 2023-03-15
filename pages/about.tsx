@@ -82,9 +82,9 @@ const RightContent = styled.div<VisibleProps>`
   flex: 1;
   margin-left: 4rem;
   padding: 4.8rem;
-  border-radius: 1.6rem;
+  border-radius: 1.2rem;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 192, 0.1);
+  background-color: rgba(233, 233, 233, 0.164);
   backdrop-filter: blur(0.4rem);
   box-shadow: 0.2rem 0.7rem 1.5rem 0.8rem rgba(0, 0, 0, 0.3);
   opacity: 0;

@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const MY_SKILL: Array<string> = [
   `FrontEnd`,
-  "Co-op&Versioning",
-  "Library&Tool",
-  "Deploy&BackEnd",
+  "Co-op & Versioning",
+  "Library & Tool",
+  "Deploy & BackEnd",
 ];
 
 interface MySkillsProps {
@@ -52,15 +52,17 @@ interface ListItemProps {
 const ListItem = styled.li<ListItemProps>`
   height: 100%;
   width: fit-content;
-  font-size: 6rem;
+  font-size: 5.2rem;
   cursor: pointer;
-  -webkit-text-stroke: 0.05rem #ffffff;
-  font-family: "CarterOne-Regular";
+  -webkit-text-stroke: 0.1rem #ffffff;
+  font-family: "RussoOne-Regular";
   position: relative;
   color: ${(props) =>
-    props.selectedSkill === props.text ? "#3e3d3e" : "transparent"};
+    props.selectedSkill === props.text ? "white" : "transparent"};
   text-shadow: ${(props) =>
-    props.selectedSkill === props.text ? "0.1rem 0.1rem 0.2rem white" : "none"};
+    props.selectedSkill === props.text
+      ? "0.4rem 0.4rem 0.4rem #323232"
+      : "none"};
   ::after {
     content: "${(props) => props.text}";
     position: absolute;
@@ -78,8 +80,8 @@ const ListItem = styled.li<ListItemProps>`
           width: 0;
         }
         100% {
-          color: #323232;
-          text-shadow: 0.1rem 0.1rem 0.2rem white;
+          color: white;
+          text-shadow: 0.2rem 0.2rem 0.2rem #323232;
           width: 100%;
         }
       }

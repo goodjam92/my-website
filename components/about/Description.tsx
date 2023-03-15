@@ -26,9 +26,9 @@ export default function Description({ selectedSkill }: DescriptionProps) {
     <DescriptionWrap>
       <DescriptionContent>
         {selectedSkill === "FrontEnd" && logoRender(FRONT_END_LOGO)}
-        {selectedSkill === "Co-op&Versioning" && logoRender(CO_OP_VERSIONING)}
-        {selectedSkill === "Library&Tool" && logoRender(LIBRARY_TOOL)}
-        {selectedSkill === "Deploy&BackEnd" && logoRender(DEPLOY_BACKEND)}
+        {selectedSkill === "Co-op & Versioning" && logoRender(CO_OP_VERSIONING)}
+        {selectedSkill === "Library & Tool" && logoRender(LIBRARY_TOOL)}
+        {selectedSkill === "Deploy & BackEnd" && logoRender(DEPLOY_BACKEND)}
       </DescriptionContent>
     </DescriptionWrap>
   );
