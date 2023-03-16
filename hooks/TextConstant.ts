@@ -3,6 +3,33 @@ import { ProjectProps } from "@/model/ProjectProps";
 export const INTRO_TEXT =
   "안녕하세요! 👋\nFront-end Developer\n구재모 입니다! :)";
 
+export const DENPIC_PROJECT_TEXT: ProjectProps = {
+  TITLE: "DENPIC",
+  PERIOD: "2022.11 ~ 2023. 02",
+  SIMPLE: "간편한 교정 관리 및 분석 웹 서비스",
+  DETAIL: [
+    "- 교정 환자들을 집중적으로 관리하기 위한 서비스 입니다.",
+    "- 교정 사진들을 timestamp 케이스 별로 기록하고 사진을 비교 분석하여 환자의 변화과정을 자세히 관찰할 수 있습니다.",
+    "- 누구나 쉽게 서비스를 이용하실 수 있도록 직관적으로 구성되어 있습니다.",
+  ],
+  USE_SKILL: [
+    "React",
+    "Typescript",
+    "Firebase",
+    "emotion",
+    "storybook",
+    "Recoil",
+  ],
+  GITHUB: {
+    repasitory: "",
+    url: "",
+  },
+  FOOTER: {
+    refType: "Denpic",
+    url: "https://winoi.net/",
+  },
+};
+
 export const WBS_PROJECT_TEXT: ProjectProps = {
   TITLE: "WHICH BEACH SEARCH",
   PERIOD: "2022. 08 ~ 2022. 10",
