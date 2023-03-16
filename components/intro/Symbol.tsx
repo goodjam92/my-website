@@ -3,7 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "react-three-fiber";
 import styled from "styled-components";
 
-const SimbolComponent = lazy(() => import("@/components/contact/MySymbol"));
+const SimbolComponent = lazy(() => import("@/components/intro/MySymbol"));
 
 export default function Symbol() {
   return (
