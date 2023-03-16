@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import { MY_WEB_SITE, WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
-import { MY_WEB_PROJECT_TEXT, WBS_PROJECT_TEXT } from "@/hooks/TextConstant";
+import { DENPIC, MY_WEB_SITE, WHICH_BEACH_SEARCH } from "@/hooks/ProjectImages";
+import {
+  DENPIC_PROJECT_TEXT,
+  MY_WEB_PROJECT_TEXT,
+  WBS_PROJECT_TEXT,
+} from "@/hooks/TextConstant";
 import SlickSlider from "./SlickSlider";
 import SlideRightContent from "./SlideRightContent";
 import SlideLeftContent from "./SlideLeftContent";
@@ -15,6 +19,15 @@ export default function Slide({ visible }: SlideProps) {
     <SlideArea>
       <SlideContent>
         <SlickSlider>
+          <SlideList>
+            <SlideContentWrap>
+              <SlideLeftContent
+                projectInfo={DENPIC_PROJECT_TEXT}
+                visible={visible}
+              />
+              <SlideRightContent projectImages={DENPIC} visible={visible} />
+            </SlideContentWrap>
+          </SlideList>
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent
