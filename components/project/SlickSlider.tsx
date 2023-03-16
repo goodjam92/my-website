@@ -59,7 +59,7 @@ const NextButton = styled.div`
   height: 4rem;
   width: 4rem;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: -0.4rem;
   z-index: 50;
   text-align: right;
@@ -90,7 +90,7 @@ const PrevButton = styled.div`
   width: 4rem;
   position: absolute;
   left: -0.4rem;
-  top: 50%;
+  top: 45%;
   z-index: 50;
   text-align: left;
   line-height: 30px;

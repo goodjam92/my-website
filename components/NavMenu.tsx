@@ -4,7 +4,6 @@ import styled, { css } from "styled-components";
 import {
   fadeInFromLeft,
   fadeInFromRight,
-  fadeOutFromLeft,
   fadeOutFromRight,
 } from "./animation/animation";
 import HomeButton from "./HomeButton";
@@ -133,14 +132,17 @@ const VerticalBar = styled.div<VerticalBarProps>`
       case 0:
         return "white";
       case 1:
-        return "wheat";
-      default:
         return "black";
+      case 2:
+        return "white";
+      case 3:
+        return "black";
+      default:
+        return "transparent";
     }
   }};
   z-index: 100;
-  animation: ${fadeInFromLeft} 1s linear forwards;
-
+  animation: ${fadeInFromLeft} 0.5s linear forwards;
   ${media.large`
     animation: ${fadeOutFromRight} 0.5s linear forwards;
   `}
