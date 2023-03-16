@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "typeRoots": ["./node_modules/@types", "react-full-page"],
+    "typeRoots": ["./node_modules/@types", "types"],
     "paths": {
       "@/*": ["./*"],
       "@profileAPI/*": ["./components/*"]
