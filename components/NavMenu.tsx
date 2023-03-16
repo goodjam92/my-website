@@ -31,7 +31,7 @@ export default function NavBar({
             onClick={() => {
               scrollToSlide(0);
             }}
-            buttonText="JAMO"
+            buttonText="JAEMO"
           />
         </HomeContainer>
         <ContentContainer>
