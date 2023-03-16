@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Slide from "@/components/project/Slide";
 import { ContentBox } from "@/components/common/commonStyle";
 import { backgroundAnimate } from "@/components/animation/animation";
+import { media } from "@/styles/media";
 
 export default function Project() {
   const projectRef = useRef<HTMLDivElement>(null);
@@ -36,11 +37,11 @@ export default function Project() {
 
   return (
     <ProjectWrap ref={projectRef}>
-      <ContentBox>
+      <ProjectContentBox>
         <ProjectContent>
           <Slide visible={localVisible} />
         </ProjectContent>
-      </ContentBox>
+      </ProjectContentBox>
     </ProjectWrap>
   );
 }
@@ -54,6 +55,29 @@ const ProjectWrap = styled.section`
   background: linear-gradient(-45deg, #000000, #1f1725, #2e2e2f, #1a232a);
   background-size: 400% 400%;
   animation: ${backgroundAnimate} 20s ease infinite;
+`;
+
+const ProjectContentBox = styled.div`
+  min-width: 120rem;
+  height: 100%;
+  margin-left: 10rem;
+  margin-right: 2rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  ${media.large`
+  min-width: 108rem;
+  margin: 0;
+`}
+  ${media.medium`
+  min-width: 88rem;
+  margin: 0;
+`}
+  ${media.small`
+  min-width: 60rem;
+  margin: 0;
+  padding: 0;
+    `}
 `;
 
 const ProjectContent = styled.div`

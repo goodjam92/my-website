@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { VisibleProps } from "@/model/VisibleProps";
 import { fadeInFromRight, fadeOut } from "../animation/animation";
 import ImageSlickSlider from "./ImageSlickSlider";
+import { media } from "@/styles/media";
 
 interface SlideRightContentProps {
   projectImages: Array<string>;
@@ -42,6 +43,12 @@ const RightContentWrap = styled.div<VisibleProps>`
       : css`
           animation: ${fadeOut} 0.2s linear forwards;
         `}
+  ${media.medium`
+  width: 290px;
+  `}
+  ${media.small`
+  width: 100%;
+  `}
 `;
 
 const RightSlideContent = styled.div`
@@ -55,6 +62,9 @@ const RightSlideContent = styled.div`
 const ImageSlideContainer = styled.div`
   padding: 2.4rem;
   box-sizing: border-box;
+  ${media.medium`
+    padding:0.4rem;
+`}
 `;
 
 const ImageItem = styled.img`

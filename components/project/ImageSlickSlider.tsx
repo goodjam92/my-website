@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import { Fragment } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
@@ -35,6 +36,12 @@ const StyledSlider = styled(Slider)`
     height: 100%;
     display: flex;
     align-items: center;
+    ${media.medium`
+    width: 280px;
+  `}
+    ${media.small`
+    width: 400px;
+  `}
   }
   .slick-track {
     display: flex;

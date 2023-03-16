@@ -4,6 +4,7 @@ import { MY_WEB_PROJECT_TEXT, WBS_PROJECT_TEXT } from "@/hooks/TextConstant";
 import SlickSlider from "./SlickSlider";
 import SlideRightContent from "./SlideRightContent";
 import SlideLeftContent from "./SlideLeftContent";
+import { media } from "@/styles/media";
 
 interface SlideProps {
   visible: boolean;
@@ -75,4 +76,12 @@ const SlideContentWrap = styled.div`
   padding: 2rem;
   box-sizing: border-box;
   gap: 4rem;
+  ${media.large`
+  gap: 0;
+`}
+  ${media.small`
+  flex-direction:column;
+  justify-content: space-between;
+  padding: 0;
+`}
 `;

@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import { Fragment } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
@@ -43,6 +44,15 @@ const StyledSlider = styled(Slider)`
     opacity: 0;
     display: none;
   }
+  ${media.large`
+  min-width: 99.6rem;
+`}
+  ${media.medium`
+  min-width: 80rem;
+`}
+  ${media.small`
+  height: 800px;
+`}
 `;
 
 const NextButton = styled.div`
@@ -50,10 +60,20 @@ const NextButton = styled.div`
   width: 4rem;
   position: absolute;
   top: 50%;
-  right: -1rem;
+  right: -0.4rem;
   z-index: 50;
   text-align: right;
   line-height: 30px;
+  transition: all 0.5s;
+  ${media.large`
+  right: 4rem;
+  `}
+  ${media.medium`
+  right: 5.2rem;
+`}
+  ${media.small`
+  right: 12%;
+`}
 `;
 
 const ButtonIcon = styled.img`
@@ -69,9 +89,19 @@ const PrevButton = styled.div`
   height: 4rem;
   width: 4rem;
   position: absolute;
-  left: -1rem;
+  left: -0.4rem;
   top: 50%;
   z-index: 50;
   text-align: left;
   line-height: 30px;
+  transition: all 0.5s;
+  ${media.large`
+    left: 4rem;
+  `}
+  ${media.medium`
+  left: 5.2rem;
+`}
+  ${media.small`
+  left: 12%;
+`}
 `;

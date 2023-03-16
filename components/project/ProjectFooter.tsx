@@ -1,4 +1,5 @@
 import { VisibleProps } from "@/model/VisibleProps";
+import { media } from "@/styles/media";
 import styled, { css } from "styled-components";
 import { fadeIn, fadeOut } from "../animation/animation";
 
@@ -58,6 +59,9 @@ const ProjectFooterWrap = styled.div<VisibleProps>`
       : css`
           animation: ${fadeOut} 0.2s linear forwards;
         `}
+  ${media.small`
+  gap: 0.4rem
+`}
 `;
 
 const FooterContent = styled.div`
@@ -70,6 +74,9 @@ const ProjectFooterText = styled.footer`
   text-align: start;
   font-size: 2rem;
   width: 8rem;
+  ${media.small`
+  font-size: 1.6rem;
+`}
 `;
 
 const ProjectFooterURL = styled.a`
@@ -88,4 +95,7 @@ const ProjectFooterURL = styled.a`
     font-size: 1.8rem;
     transition: 0.5s;
   }
+  ${media.small`
+  font-size: 1.4rem;
+`}
 `;

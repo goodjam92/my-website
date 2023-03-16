@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import styled from "styled-components";
 
 interface ProjectSkillTextProps {
@@ -20,5 +21,9 @@ const SkillTextBox = styled.div`
   font-size: 2rem;
   padding: 0.4rem;
   letter-spacing: 0.02rem;
-  font-family: CarterOne-Regular;
+  font-family: RussoOne-Regular;
+  ${media.medium`
+        font-size: 1.6rem;
+        font-weight: 300;
+`}
 `;
