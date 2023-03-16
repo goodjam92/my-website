@@ -31,11 +31,11 @@ export default function Slide({ visible }: SlideProps) {
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent
-                projectInfo={WBS_PROJECT_TEXT}
+                projectInfo={MY_WEB_PROJECT_TEXT}
                 visible={visible}
               />
               <SlideRightContent
-                projectImages={WHICH_BEACH_SEARCH}
+                projectImages={MY_WEB_SITE}
                 visible={visible}
               />
             </SlideContentWrap>
@@ -43,11 +43,11 @@ export default function Slide({ visible }: SlideProps) {
           <SlideList>
             <SlideContentWrap>
               <SlideLeftContent
-                projectInfo={MY_WEB_PROJECT_TEXT}
+                projectInfo={WBS_PROJECT_TEXT}
                 visible={visible}
               />
               <SlideRightContent
-                projectImages={MY_WEB_SITE}
+                projectImages={WHICH_BEACH_SEARCH}
                 visible={visible}
               />
             </SlideContentWrap>

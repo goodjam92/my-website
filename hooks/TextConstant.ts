@@ -68,12 +68,12 @@ export const MY_WEB_PROJECT_TEXT: ProjectProps = {
   ],
   USE_SKILL: ["NextJS", "Styled Component", "Typescript", "Versel", "Threejs"],
   GITHUB: {
-    repasitory: "",
-    url: "",
+    repasitory: "My WebSite",
+    url: "https://github.com/goodjam92/my-website",
   },
   FOOTER: {
-    refType: "",
-    url: "",
+    refType: "Web",
+    url: "https://jaemokoo.vercel.app/",
   },
 };
 
