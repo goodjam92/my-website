@@ -1,8 +1,16 @@
 import { media } from "@/styles/media";
-import styled from "styled-components";
-import { fadeInFromLeft, fadeOutFromRight } from "./animation/animation";
+import { useState } from "react";
+import styled, { css } from "styled-components";
+import {
+  fadeInFromLeft,
+  fadeInFromRight,
+  fadeOutFromLeft,
+  fadeOutFromRight,
+} from "./animation/animation";
 import HomeButton from "./HomeButton";
 import NavButton from "./NavButton";
+import SideBarButton from "./SideBarButton";
+import { Spacer } from "./Spacer";
 
 interface NavBarProps {
   getCurrentSlideIndex: () => number;
@@ -13,6 +21,8 @@ export default function NavBar({
   getCurrentSlideIndex,
   scrollToSlide,
 }: NavBarProps) {
+  const [showSideBar, setShowSideBar] = useState<boolean>(false);
+
   return (
     <WebHeader>
       <Controller index={getCurrentSlideIndex()}>
@@ -21,7 +31,6 @@ export default function NavBar({
             onClick={() => {
               scrollToSlide(0);
             }}
-            slideIndex={getCurrentSlideIndex}
             buttonText="JAMO"
           />
         </HomeContainer>
@@ -59,6 +68,47 @@ export default function NavBar({
             buttonText="<Contact />"
           />
         </ContentContainer>
+        <NavSideBarButton onClick={() => setShowSideBar((prev) => !prev)}>
+          <NavSideBarIcon src="/assets/image/nav-icon.png" alt="navicon" />
+        </NavSideBarButton>
+        <NavSideBar showSideBar={showSideBar}>
+          <NavCloseButton onClick={() => setShowSideBar((prev) => !prev)}>
+            <SideBarCloseIcon src="/assets/image/close.png" alt="close" />
+          </NavCloseButton>
+          <Spacer height={6} />
+          <SideBarButton
+            text="<About />"
+            buttonIndex="1"
+            slideIndex={getCurrentSlideIndex}
+            onClick={() => {
+              scrollToSlide(1);
+            }}
+          />
+          <SideBarButton
+            text="<Project />"
+            buttonIndex="2"
+            slideIndex={getCurrentSlideIndex}
+            onClick={() => {
+              scrollToSlide(2);
+            }}
+          />
+          <SideBarButton
+            text="<Career />"
+            buttonIndex="3"
+            slideIndex={getCurrentSlideIndex}
+            onClick={() => {
+              scrollToSlide(3);
+            }}
+          />
+          <SideBarButton
+            text="<Contact />"
+            buttonIndex="4"
+            slideIndex={getCurrentSlideIndex}
+            onClick={() => {
+              scrollToSlide(4);
+            }}
+          />
+        </NavSideBar>
       </Controller>
       <VerticalBar index={getCurrentSlideIndex()} />
     </WebHeader>
@@ -98,7 +148,7 @@ const VerticalBar = styled.div<VerticalBarProps>`
 
 const WebHeader = styled.nav`
   height: 11.2rem;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   display: flex;
   align-items: center;
@@ -126,7 +176,7 @@ const Controller = styled.div<ControllerProps>`
 
 const HomeContainer = styled.div`
   height: 100%;
-  width: 100%;
+  width: fit-content;
 `;
 
 const ContentContainer = styled.ul`
@@ -134,4 +184,65 @@ const ContentContainer = styled.ul`
   align-items: center;
   margin: 0;
   gap: 1.2rem;
+  ${media.large`
+  animation: ${fadeInFromRight} 0.5s linear forwards;
+  `}
+  ${media.medium`
+  display:none;
+  `}
+`;
+
+const NavSideBarButton = styled.button`
+  width: 3.6rem;
+  height: 3.6rem;
+  position: fixed;
+  top: 3.8rem;
+  right: 5.6rem;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  display: none;
+  ${media.medium`
+  animation: ${fadeInFromRight} 0.5s linear forwards;
+  display:flex;
+  `}
+`;
+
+const NavSideBarIcon = styled.img`
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) invert(1);
+`;
+
+interface NavSideBarProps {
+  showSideBar: boolean;
+}
+
+const NavSideBar = styled.ul<NavSideBarProps>`
+  height: 100vh;
+  width: 24rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  display: none;
+  padding: 3rem;
+  ${(props) =>
+    props.showSideBar &&
+    css`
+      animation: ${fadeInFromRight} 0.3s linear forwards;
+      display: block;
+      z-index: 3;
+    `}
+`;
+
+const NavCloseButton = styled.button`
+  width: 3.6rem;
+  height: 3.6rem;
+`;
+
+const SideBarCloseIcon = styled.img`
+  width: 100%;
+  height: 100%;
+  margin: 0;
 `;

@@ -34,6 +34,18 @@ export const fadeOutFromRight = keyframes`
   }
 `;
 
+export const fadeOutFromLeft = keyframes`
+  0%{
+    transform: translateX(0);
+    opacity:1;
+    }
+  100% {
+    transform: translateX(10rem);
+    opacity: 0;
+    display:none;
+  }
+`;
+
 export const fadeIn = keyframes`
 0%{
   opacity: 0;

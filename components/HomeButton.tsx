@@ -3,14 +3,9 @@ import styled from "styled-components";
 interface HomeButtonProps {
   onClick: () => void;
   buttonText: string;
-  slideIndex: () => number;
 }
 
-export default function HomeButton({
-  onClick,
-  buttonText,
-  slideIndex,
-}: HomeButtonProps) {
+export default function HomeButton({ onClick, buttonText }: HomeButtonProps) {
   return (
     <NavItemContainer>
       <NavItem onClick={onClick}>{buttonText}</NavItem>
@@ -19,12 +14,13 @@ export default function HomeButton({
 }
 
 const NavItemContainer = styled.div`
-  width: 12rem;
-  height: 100%;
   list-style: none;
+  padding: 0.5rem;
+  box-sizing: border-box;
 `;
 
 const NavItem = styled.button`
+  display: block;
   height: 100%;
   width: 100%;
   letter-spacing: 0.05rem;

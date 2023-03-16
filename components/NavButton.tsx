@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import { NavItemProps } from "@/model/NavProps";
 
 interface NavButtonProps {
   slideIndex: () => number;
@@ -28,11 +29,6 @@ const NavItemContainer = styled.li`
   height: 4.8rem;
   list-style: none;
 `;
-
-interface NavItemProps {
-  index: number;
-  name: string;
-}
 
 const NavItem = styled.button<NavItemProps>`
   height: 100%;
