@@ -19,4 +19,7 @@ export const WHICH_BEACH_SEARCH = [
 export const MY_WEB_SITE = [
   "/assets/image/myWebsite/intro.png",
   "/assets/image/myWebsite/about.png",
+  "/assets/image/myWebsite/project.png",
+  "/assets/image/myWebsite/career.png",
+  "/assets/image/myWebsite/contact.png",
 ];
