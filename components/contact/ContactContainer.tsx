@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { CONTACT_TEXT } from "@/hooks/TextConstant";
 import ContactInfo from "./ContactInfo";
+import { media } from "@/styles/media";
 
 export default function ContactContainer() {
   return (
@@ -26,12 +27,20 @@ const ContainerWrap = styled.div`
   box-sizing: border-box;
   color: white;
   gap: 3.2rem;
+  ${media.small`
+  gap: 2rem;
+  min-height: 36rem;
+  min-width: 32rem;
+  `}
 `;
 
 const ContactHeader = styled.h2`
   font-size: 3.2rem;
   text-align: center;
   font-family: "Audiowide-Regular";
+  ${media.small`
+  font-size: 2.8rem;
+  `}
 `;
 
 const ContactThanks = styled.h2`
@@ -40,6 +49,9 @@ const ContactThanks = styled.h2`
   white-space: pre-line;
   font-weight: 400;
   line-height: 150%;
+  ${media.small`
+  font-size: 2rem;
+  `}
 `;
 
 const ContactItem = styled.div`
@@ -48,4 +60,7 @@ const ContactItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.8rem;
+  ${media.small`
+  gap: 1.6rem;
+  `}
 `;

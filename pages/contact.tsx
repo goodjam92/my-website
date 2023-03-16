@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import { VisibleProps } from "@/model/VisibleProps";
 import ContactContainer from "@/components/contact/ContactContainer";
+import { media } from "@/styles/media";
 
 export default function Contact() {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -76,4 +77,8 @@ const ContactContentBox = styled.div`
   background-color: transparent;
   backdrop-filter: blur(0.4rem);
   border-radius: 0.8rem;
+  ${media.medium`
+    margin: 0;
+    padding: 0;
+  `}
 `;
