@@ -36,6 +36,7 @@ export const FlexBox = styled.div`
   display: flex;
   align-items: center;
   transition: all 0.5s;
+
   ${media.medium`
   flex-direction: column;
 `}

@@ -1,4 +1,5 @@
 import { OTHER_CAREER_TEXT } from "@/hooks/TextConstant";
+import { media } from "@/styles/media";
 import styled from "styled-components";
 
 export default function OtherCareerCard() {
@@ -30,6 +31,10 @@ const OtherBackCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${media.medium`
+  padding: 2rem;
+  gap: 1rem;
+`}
 `;
 
 const OtherBackInfo = styled.div`
@@ -42,6 +47,9 @@ const OtherBackInfo = styled.div`
 
 const Company = styled.h2`
   font-size: 2.4rem;
+  ${media.medium`
+  font-size: 2rem;
+`}
 `;
 
 const Period = styled.h2`
@@ -49,10 +57,16 @@ const Period = styled.h2`
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
   font-weight: 300;
+  ${media.medium`
+  font-size: 1.6rem;
+`}
 `;
 
 const Work = styled.h2`
   font-size: 2rem;
   margin-top: 1rem;
   font-weight: 400;
+  ${media.medium`
+  font-size: 1.6rem;
+`}
 `;

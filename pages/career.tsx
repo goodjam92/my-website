@@ -3,6 +3,7 @@ import { backgroundAnimate } from "@/components/animation/animation";
 import DeveloperCard from "@/components/career/DeveloperCard";
 import { ContentBox, FlexBox } from "@/components/common/commonStyle";
 import OtherCareerCard from "@/components/career/OtherCareerCard";
+import { media } from "@/styles/media";
 
 export default function Career() {
   const onClickedCareerButton = (event: any) => {
@@ -16,7 +17,7 @@ export default function Career() {
 
   return (
     <CareerWrap>
-      <ContentBox>
+      <CareerContentBox>
         <CareerFlexBox>
           <CareerCard onClick={onClickedCareerButton}>
             <InfoFrontCard>
@@ -38,7 +39,7 @@ export default function Career() {
             </InfoBackCard>
           </CareerCard>
         </CareerFlexBox>
-      </ContentBox>
+      </CareerContentBox>
     </CareerWrap>
   );
 }
@@ -54,11 +55,44 @@ const CareerWrap = styled.section`
   animation: ${backgroundAnimate} 20s ease infinite;
 `;
 
-const CareerFlexBox = styled(FlexBox)`
-  min-width: 100%;
+const CareerContentBox = styled.div`
+  min-width: 120rem;
+  height: 100%;
+  margin-left: 10rem;
+  margin-right: 2rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  ${media.large`
+  min-width: 108rem;
+  margin: 0;
+`}
+  ${media.medium`
+  min-width: 68rem;
+  margin: 0;
+`}
+  ${media.small`
+  min-width: 60rem;
+  margin: 0;
+`}
+`;
+
+const CareerFlexBox = styled.div`
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  width: 100%;
   height: 42rem;
   perspective: 1000px;
   gap: 4rem;
+
+  ${media.large`
+  gap: 2rem;
+  `}
+  ${media.medium`
+  flex-direction: column;
+  min-height: 64rem;
+  `}
 `;
 
 const CareerCard = styled.div`
