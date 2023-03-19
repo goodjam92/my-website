@@ -68,7 +68,7 @@ const ProjectContentBox = styled.div`
   ${media.large`
   margin: 0;
 `}
-  ${media.small`
+  ${media.medium`
   padding: 0;
     `}
 `;
