@@ -114,7 +114,6 @@ const RightSlideContent = styled.div`
   ${media.xSmall`
   padding: 1.4rem;
   border-radius: 0.8rem;
-  gap: 0.4rem;
 `}
 `;
 
@@ -134,7 +133,6 @@ const ProjectTitle = styled.h2<VisibleProps>`
         `}
   ${media.medium`
         font-size: 2.4rem;
-        font-weight: 300;
 `}
   ${media.small`
   font-size: 2rem;

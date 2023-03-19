@@ -44,7 +44,7 @@ const TextHyphen = styled(Hyphen)`
 `}
   ${media.small`
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 450;
 `}
 `;
 
@@ -54,6 +54,6 @@ const Text = styled(HyphenText)`
 `}
   ${media.small`
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 450;
 `}
 `;
