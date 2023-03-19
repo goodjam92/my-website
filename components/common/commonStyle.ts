@@ -10,24 +10,20 @@ export const InnerContainer = styled.div`
 `;
 
 export const ContentBox = styled.div`
-  min-width: 120rem;
+  width: 100%;
   height: 100%;
   margin-left: 10rem;
   margin-right: 2rem;
   padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   transition: all 0.5s;
   ${media.large`
-  min-width: 108rem;
-  margin: 0;
-`}
-  ${media.medium`
-  min-width: 88rem;
   margin: 0;
 `}
   ${media.small`
-  min-width: fit-content;
-  margin: 0;
   padding: 0;
     `}
 `;
