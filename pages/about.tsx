@@ -114,9 +114,9 @@ const RightContent = styled.div<VisibleProps>`
         `}
   transition: all 0.5s;
   ${media.large`
-  min-width: 36rem;
-  max-width: 68rem;
-  padding: 2rem;
+  max-width: 100%;
+  padding: 3.2rem;
+  margin: 0;
 `}
   ${media.medium`
   min-width: 60rem;

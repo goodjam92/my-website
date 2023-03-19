@@ -59,8 +59,8 @@ const MySkillLogoItem = styled.li<MySkillLogoItme>`
     height: 10.4rem;
     `}
     ${media.xSmall`
-    width: 8.8rem;
-    height: 8.8rem;
+    width: 9.2rem;
+    height: 9.2rem;
     `}
   }
   ${media.small`
