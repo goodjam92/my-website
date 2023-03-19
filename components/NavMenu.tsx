@@ -160,6 +160,14 @@ const WebHeader = styled.nav`
   padding: 2.4rem;
   box-sizing: border-box;
   z-index: 100;
+  ${media.medium`
+    height: 10rem;
+    padding: 1.2rem;
+  `}
+  ${media.small`
+    height: 6.4rem;
+    padding: 0.8rem;
+  `}
 `;
 
 interface ControllerProps {
