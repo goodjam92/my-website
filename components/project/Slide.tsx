@@ -62,7 +62,6 @@ const SlideArea = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  text-align: center;
   .slick-slide {
     display: inline-block;
     margin: 0 auto;
