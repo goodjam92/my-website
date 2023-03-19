@@ -33,7 +33,7 @@ export const FlexBox = styled.div`
 export const HyphenTextWrap = styled.div`
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 interface HyphenTextProps {
