@@ -34,8 +34,13 @@ const MySkillLogoItem = styled.li<MySkillLogoItme>`
   animation-delay: ${(props) => props.index * 0.5}s;
   transition: all 0.5s;
   ${media.small`
-  width: 9.6rem;
-  height: 9.6rem;
+  width: 8rem;
+  height: 8rem;
+  padding: 0.8rem;
+`}
+  ${media.xSmall`
+  width: 6.8rem;
+  height: 6.8rem;
   padding: 0.8rem;
 `}
 `;

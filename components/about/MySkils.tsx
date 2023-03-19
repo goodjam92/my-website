@@ -37,6 +37,7 @@ export default function MySkils({
 }
 
 const List = styled.ul`
+  width: 100%;
   min-height: 44rem;
   list-style: none;
   display: flex;
@@ -49,9 +50,17 @@ const List = styled.ul`
   flex-direction: row;
   align-items: center;
   flex-wrap:wrap;
-  padding: 0;
-  margin-top: 4rem;
-  gap:4rem;
+  justify-content:flex-start;
+  gap: 2.8rem;
+`}
+  ${media.small`
+  height: 100%;
+  width: 100%;
+  padding: 0.4rem;
+  margin:0;
+  gap: 1.2rem;
+  flex-direction:column;
+  align-items:flex-start;
 `}
 `;
 
@@ -103,9 +112,12 @@ const ListItem = styled.li<ListItemProps>`
   font-size: 4.8rem;
 `}
   ${media.medium`
-  font-size: 4rem
+  font-size: 4rem;
 `}
   ${media.small`
-  font-size: 3.6rem 
+  font-size: 3.2rem;
+`}
+${media.xSmall`
+  font-size: 2.2rem;
 `}
 `;
