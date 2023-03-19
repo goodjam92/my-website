@@ -1,3 +1,4 @@
+import { media } from "@/styles/media";
 import styled from "styled-components";
 
 interface HomeButtonProps {
@@ -27,4 +28,7 @@ const NavItem = styled.button`
   font-size: 3.2rem;
   font-family: "Audiowide-Regular";
   color: white;
+  ${media.xSmall`
+  font-size: 2.8rem;
+  `}
 `;
