@@ -2,11 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { media } from "@/styles/media";
 import { INTRO_TEXT } from "@/hooks/TextConstant";
-import {
-  ContentBox,
-  FlexBox,
-  InnerContainer,
-} from "@/components/common/commonStyle";
+import { ContentBox, FlexBox } from "@/components/common/commonStyle";
 import Symbol from "@/components/intro/Symbol";
 import { fadeIn, fadeOut } from "@/components/animation/animation";
 import { VisibleProps } from "@/model/VisibleProps";
@@ -92,18 +88,16 @@ export default function Intro() {
     <>
       <IntroWrap ref={ref}>
         {localVisible === true ? <MagicScreen ref={magicRef} /> : null}
-        <InnerContainer>
-          <ContentBox>
-            <FlexBox>
-              <IntroLeftSection>
-                <IntroText>{landingText}</IntroText>
-              </IntroLeftSection>
-              <IntroRightSection visible={localVisible}>
-                {localVisible === true ? <Symbol /> : null}
-              </IntroRightSection>
-            </FlexBox>
-          </ContentBox>
-        </InnerContainer>
+        <ContentBox>
+          <FlexBox>
+            <IntroLeftSection>
+              <IntroText>{landingText}</IntroText>
+            </IntroLeftSection>
+            <IntroRightSection visible={localVisible}>
+              {localVisible === true ? <Symbol /> : null}
+            </IntroRightSection>
+          </FlexBox>
+        </ContentBox>
       </IntroWrap>
     </>
   );
