@@ -30,46 +30,48 @@ export default function NavBar({
             onClick={() => {
               scrollToSlide(0);
             }}
-            buttonText="JAMO"
+            buttonText="JAEMO"
           />
         </HomeContainer>
         <ContentContainer>
-          <NavButton
-            onClick={() => {
-              scrollToSlide(1);
-            }}
-            slideIndex={getCurrentSlideIndex}
-            buttonIndex="1"
-            buttonText="<About />"
-          />
-          <NavButton
-            onClick={() => {
-              scrollToSlide(2);
-            }}
-            slideIndex={getCurrentSlideIndex}
-            buttonIndex="2"
-            buttonText="<Project />"
-          />
-          <NavButton
-            onClick={() => {
-              scrollToSlide(3);
-            }}
-            slideIndex={getCurrentSlideIndex}
-            buttonIndex="3"
-            buttonText="<Career />"
-          />
-          <NavButton
-            onClick={() => {
-              scrollToSlide(4);
-            }}
-            slideIndex={getCurrentSlideIndex}
-            buttonIndex="4"
-            buttonText="<Contact />"
-          />
+          <NavRowBarContainer>
+            <NavButton
+              onClick={() => {
+                scrollToSlide(1);
+              }}
+              slideIndex={getCurrentSlideIndex}
+              buttonIndex="1"
+              buttonText="<About />"
+            />
+            <NavButton
+              onClick={() => {
+                scrollToSlide(2);
+              }}
+              slideIndex={getCurrentSlideIndex}
+              buttonIndex="2"
+              buttonText="<Project />"
+            />
+            <NavButton
+              onClick={() => {
+                scrollToSlide(3);
+              }}
+              slideIndex={getCurrentSlideIndex}
+              buttonIndex="3"
+              buttonText="<Career />"
+            />
+            <NavButton
+              onClick={() => {
+                scrollToSlide(4);
+              }}
+              slideIndex={getCurrentSlideIndex}
+              buttonIndex="4"
+              buttonText="<Contact />"
+            />
+          </NavRowBarContainer>
+          <NavSideBarButton onClick={() => setShowSideBar((prev) => !prev)}>
+            <NavSideBarIcon src="/assets/image/nav-icon.png" alt="navicon" />
+          </NavSideBarButton>
         </ContentContainer>
-        <NavSideBarButton onClick={() => setShowSideBar((prev) => !prev)}>
-          <NavSideBarIcon src="/assets/image/nav-icon.png" alt="navicon" />
-        </NavSideBarButton>
         <NavSideBar showSideBar={showSideBar}>
           <NavCloseButton onClick={() => setShowSideBar((prev) => !prev)}>
             <SideBarCloseIcon src="/assets/image/close.png" alt="close" />
@@ -181,10 +183,8 @@ const HomeContainer = styled.div`
   width: fit-content;
 `;
 
-const ContentContainer = styled.ul`
+const NavRowBarContainer = styled.ul`
   display: flex;
-  align-items: center;
-  margin: 0;
   gap: 1.2rem;
   ${media.large`
   animation: ${fadeInFromRight} 0.5s linear forwards;
@@ -194,25 +194,30 @@ const ContentContainer = styled.ul`
   `}
 `;
 
+const ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const NavSideBarButton = styled.button`
   width: 3.6rem;
   height: 3.6rem;
-  position: fixed;
-  top: 3.8rem;
-  right: 5.6rem;
   z-index: 1;
-  padding: 0;
-  margin: 0;
   display: none;
   ${media.medium`
   animation: ${fadeInFromRight} 0.5s linear forwards;
   display:flex;
+  `}
+  ${media.xSmall`
+    width: 2.8rem;
+    height: 2.8rem;
   `}
 `;
 
 const NavSideBarIcon = styled.img`
   width: 100%;
   height: 100%;
+  margin: 0;
   filter: brightness(0) invert(1);
 `;
 
@@ -221,8 +226,8 @@ interface NavSideBarProps {
 }
 
 const NavSideBar = styled.ul<NavSideBarProps>`
-  height: 100vh;
-  width: 24rem;
+  height: 100%;
+  width: 50%;
   position: fixed;
   right: 0;
   top: 0;
