@@ -29,3 +29,23 @@ export const FlexBox = styled.div`
   flex-direction: column;
 `}
 `;
+
+export const HyphenTextWrap = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+`;
+
+interface HyphenTextProps {
+  fontSize: number;
+}
+
+export const Hyphen = styled.div<HyphenTextProps>`
+  font-size: ${(props) => props.fontSize}rem;
+  align-self: flex-start;
+`;
+
+export const HyphenText = styled.h3<HyphenTextProps>`
+  font-size: ${(props) => props.fontSize}rem;
+  font-weight: 500;
+`;
