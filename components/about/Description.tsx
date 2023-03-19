@@ -13,10 +13,15 @@ interface DescriptionProps {
 }
 
 export default function Description({ selectedSkill }: DescriptionProps) {
-  function logoRender(skillList: string[]) {
+  function logoRender(skillList: { skill: string; src: string }[]) {
     const render = () => {
       const renderList = skillList.map((item, index) => (
-        <MySkillLogo logoFile={item} key={item} index={index} />
+        <MySkillLogo
+          logoFile={item.src}
+          key={item.src}
+          index={index}
+          text={item.skill}
+        />
       ));
       return renderList;
     };
@@ -51,7 +56,6 @@ const DescriptionWrap = styled.div`
 `}
   ${media.xSmall`
   min-height: 30rem;
-  
 `}
 `;
 

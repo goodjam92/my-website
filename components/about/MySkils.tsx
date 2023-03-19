@@ -62,6 +62,10 @@ const List = styled.ul`
   flex-direction:column;
   align-items:flex-start;
 `}
+  ${media.xSmall`
+  margin-left:2rem;
+  gap: 2rem;
+`}
 `;
 
 interface ListItemProps {
