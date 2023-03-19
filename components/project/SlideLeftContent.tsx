@@ -77,6 +77,10 @@ const LeftContentWrap = styled.div<VisibleProps>`
   width: 56rem;
   height: 30rem;
 `}
+  ${media.xSmall`
+  max-width: 38rem;
+  height: 100%;
+`}
 `;
 
 const RightSlideContent = styled.div`
@@ -98,6 +102,11 @@ const RightSlideContent = styled.div`
 `}
   ${media.small`
   padding: 1.6rem;
+  gap: 0.4rem;
+`}
+  ${media.xSmall`
+  padding: 1.4rem;
+  border-radius: 0.8rem;
   gap: 0.4rem;
 `}
 `;
@@ -153,6 +162,9 @@ const ProjectDescription = styled.div`
   gap: 1.4rem;
   ${media.small`
   gap: 0.6rem;
+`}
+  ${media.xSmall`
+  gap: 0.4rem;
 `}
 `;
 

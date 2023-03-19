@@ -76,7 +76,8 @@ const SlideContent = styled.div`
 `;
 
 const SlideList = styled.div`
-  height: 60rem;
+  display: flex;
+  height: 100%;
   padding: 0;
 `;
 
@@ -96,5 +97,8 @@ const SlideContentWrap = styled.div`
   flex-direction:column;
   justify-content: space-between;
   padding: 0;
+`}
+  ${media.xSmall`
+  margin-top: 6.8rem;
 `}
 `;

@@ -35,8 +35,7 @@ export default function SlickSlider(props: any) {
 }
 
 const StyledSlider = styled(Slider)`
-  width: 98%;
-  min-width: 110rem;
+  width: 100%;
   overflow: hidden;
   position: relative;
   .slick-prev::before,
@@ -52,6 +51,10 @@ const StyledSlider = styled(Slider)`
 `}
   ${media.small`
   height: 800px;
+`}
+  ${media.xSmall`
+  height: 100%;
+  width: 100%;
 `}
 `;
 
@@ -73,6 +76,12 @@ const NextButton = styled.div`
 `}
   ${media.small`
   right: 12%;
+`}
+  ${media.xSmall`
+  right: 25%;
+  top: 50%;
+  height: 2.8rem;
+  width: 2.8rem;
 `}
 `;
 
@@ -103,5 +112,11 @@ const PrevButton = styled.div`
 `}
   ${media.small`
   left: 12%;
+`}
+  ${media.xSmall`
+  left: 25%;
+  top: 50%;
+  height: 2.8rem;
+  width: 2.8rem;
 `}
 `;
