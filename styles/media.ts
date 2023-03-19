@@ -1,11 +1,12 @@
 import { css, CSSObject, SimpleInterpolation } from "styled-components";
 
-type DeviceType = "large" | "medium" | "small";
+type DeviceType = "large" | "medium" | "small" | "xSmall";
 
 const sizes: Record<DeviceType, number> = {
   large: 1300,
   medium: 1000,
   small: 680,
+  xSmall: 480,
 };
 
 const media = Object.entries(sizes).reduce((acc, [key, value]) => {

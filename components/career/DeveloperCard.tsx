@@ -1,6 +1,7 @@
 import { CAREER_TEXT } from "@/hooks/TextConstant";
 import { media } from "@/styles/media";
 import styled from "styled-components";
+import { Hyphen, HyphenText, HyphenTextWrap } from "../common/commonStyle";
 
 export default function DeveloperCard() {
   return (
@@ -8,7 +9,10 @@ export default function DeveloperCard() {
       <Company>{CAREER_TEXT.COMPANY}</Company>
       <Period>({CAREER_TEXT.PERIOD})</Period>
       {CAREER_TEXT.WORK.map((item) => (
-        <Work key={item}>{item}</Work>
+        <DevelopTextWrap key={item}>
+          <DevelopTextHyphen fontSize={2}>-</DevelopTextHyphen>{" "}
+          <DevelopText fontSize={2}>{item}</DevelopText>
+        </DevelopTextWrap>
       ))}
     </DeveloperBackCard>
   );
@@ -47,15 +51,35 @@ const Period = styled.h2`
 `}
 `;
 
-const Work = styled.h2`
-  font-size: 2rem;
-  margin-top: 2rem;
+const DevelopTextWrap = styled(HyphenTextWrap)`
+  line-height: 2;
+  gap: 1rem;
+`;
+
+const DevelopTextHyphen = styled(Hyphen)`
   font-weight: 400;
-  white-space: pre-line;
   ${media.medium`
   font-size: 1.8rem;
 `}
   ${media.small`
   font-size: 1.6rem;
+  line-height: 2;
+`}
+  ${media.xSmall`
+  line-height: 1.6;
+`}
+`;
+
+const DevelopText = styled(HyphenText)`
+  font-weight: 400;
+  ${media.medium`
+  font-size: 1.8rem;
+`}
+  ${media.small`
+  font-size: 1.6rem;
+  line-height: 2;
+`}
+  ${media.xSmall`
+  line-height: 1.6;
 `}
 `;

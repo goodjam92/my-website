@@ -64,7 +64,7 @@ export default function About() {
 
 const AboutWrap = styled.section`
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   background: linear-gradient(-45deg, #06769b, #068c9b, #0c638f, #06769b);
   background-size: 400% 400%;
   animation: ${backgroundAnimate} 20s ease infinite;
@@ -74,39 +74,34 @@ const AboutWrap = styled.section`
 `;
 
 const AboutFlexBox = styled(FlexBox)`
+  display: flex;
+  justify-content: space-evenly;
   gap: 2rem;
-  ${media.large`
-  gap: 0.8;`}
-  ${media.medium`
-  gap: 6rem;
-`}
-  ${media.small`
-  gap: 4rem;
-`}
 `;
 
 const LeftContent = styled.div`
-  width: fit-content;
   transition: all 0.5s;
   ${media.medium`
   width: 60rem;
-  margin: 0;
 `}
   ${media.small`
   width: 48rem;
-  margin: 0;
+`}
+  ${media.xSmall`
+  width: 100%;
 `}
 `;
 
 const RightContent = styled.div<VisibleProps>`
-  flex: 1;
+  flex: 0.5;
   margin-left: 4rem;
-  padding: 4.8rem;
+  padding: 4rem;
   border-radius: 1.2rem;
   box-sizing: border-box;
   background-color: rgba(233, 233, 233, 0.164);
   backdrop-filter: blur(0.4rem);
   box-shadow: 0.2rem 0.7rem 1.5rem 0.8rem rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
   opacity: 0;
   ${(props) =>
     props.visible === true
@@ -119,7 +114,9 @@ const RightContent = styled.div<VisibleProps>`
         `}
   transition: all 0.5s;
   ${media.large`
-  margin-left: 2rem;
+  max-width: 100%;
+  padding: 3.2rem;
+  margin: 0;
 `}
   ${media.medium`
   min-width: 60rem;
@@ -128,9 +125,13 @@ const RightContent = styled.div<VisibleProps>`
   padding: 2rem;
 `}
   ${media.small`
-  margin-top: 2rem;
-  min-width: 52rem;
+  min-width: 50rem;
   max-width: 56rem;
+  padding: 0.8rem;
+`}
+  ${media.xSmall`
+  min-width: 34rem;
+  max-width: 40rem;
   padding: 0.8rem;
 `}
 `;

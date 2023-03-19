@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     scrollbar-width: none;
   }
   body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;

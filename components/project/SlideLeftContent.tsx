@@ -11,6 +11,7 @@ import {
 import ProjectSkillText from "./ProjectSkillText";
 import ProjectFooter from "./ProjectFooter";
 import { media } from "@/styles/media";
+import DescriptionText from "./DescriptionText";
 
 interface SlideLeftContentProps {
   projectInfo: ProjectProps;
@@ -35,9 +36,12 @@ export default function SlideLeftContent({
         </ProjectText>
         <ProjectDescription>
           {projectInfo.DETAIL.map((text, index) => (
-            <DescriptionText visible={visible} delay={index + 1.5} key={text}>
-              {text}
-            </DescriptionText>
+            <DescriptionText
+              visible={visible}
+              index={index}
+              description={text}
+              key={text}
+            />
           ))}
           <SkillTextWrap visible={visible}>
             {projectInfo.USE_SKILL.map((skill) => (
@@ -45,11 +49,14 @@ export default function SlideLeftContent({
             ))}
           </SkillTextWrap>
         </ProjectDescription>
-        <ProjectFooter
-          github={projectInfo.GITHUB}
-          footer={projectInfo.FOOTER}
-          visible={visible}
-        />
+        {projectInfo.GITHUB.url === "" &&
+        projectInfo.FOOTER.url === "" ? null : (
+          <ProjectFooter
+            github={projectInfo.GITHUB}
+            footer={projectInfo.FOOTER}
+            visible={visible}
+          />
+        )}
       </RightSlideContent>
     </LeftContentWrap>
   );
@@ -75,7 +82,11 @@ const LeftContentWrap = styled.div<VisibleProps>`
 `}
   ${media.small`
   width: 56rem;
-  height: 30rem;
+  height: 100%;
+`}
+  ${media.xSmall`
+  max-width: 38rem;
+  height: 100%;
 `}
 `;
 
@@ -100,6 +111,10 @@ const RightSlideContent = styled.div`
   padding: 1.6rem;
   gap: 0.4rem;
 `}
+  ${media.xSmall`
+  padding: 1.4rem;
+  border-radius: 0.8rem;
+`}
 `;
 
 const ProjectTitle = styled.h2<VisibleProps>`
@@ -118,7 +133,6 @@ const ProjectTitle = styled.h2<VisibleProps>`
         `}
   ${media.medium`
         font-size: 2.4rem;
-        font-weight: 300;
 `}
   ${media.small`
   font-size: 2rem;
@@ -147,32 +161,15 @@ const ProjectText = styled.h3<VisibleProps>`
 `;
 
 const ProjectDescription = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: start;
   gap: 1.4rem;
   ${media.small`
   gap: 0.6rem;
 `}
-`;
-
-const DescriptionText = styled.h3<VisibleProps>`
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.4;
-  opacity: 0;
-  ${(props) =>
-    props.visible === true
-      ? css`
-          animation: ${cliptext} 0.5s linear forwards;
-          animation-delay: ${props.delay}s;
-        `
-      : css`
-          animation: ${fadeOut} 0.2s linear forwards;
-        `}
-  ${media.small`
-  font-size: 1.4rem;
-  font-weight: 400;
+  ${media.xSmall`
+  gap: 0.4rem;
 `}
 `;
 
@@ -188,7 +185,7 @@ const SkillTextWrap = styled.div<VisibleProps>`
     props.visible === true
       ? css`
           animation: ${fadeIn} 1s linear forwards;
-          animation-delay: 5s;
+          animation-delay: 4.5s;
         `
       : css`
           animation: ${fadeOut} 0.2s linear forwards;

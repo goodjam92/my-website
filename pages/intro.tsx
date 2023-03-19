@@ -2,11 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import { media } from "@/styles/media";
 import { INTRO_TEXT } from "@/hooks/TextConstant";
-import {
-  ContentBox,
-  FlexBox,
-  InnerContainer,
-} from "@/components/common/commonStyle";
+import { ContentBox, FlexBox } from "@/components/common/commonStyle";
 import Symbol from "@/components/intro/Symbol";
 import { fadeIn, fadeOut } from "@/components/animation/animation";
 import { VisibleProps } from "@/model/VisibleProps";
@@ -92,18 +88,16 @@ export default function Intro() {
     <>
       <IntroWrap ref={ref}>
         {localVisible === true ? <MagicScreen ref={magicRef} /> : null}
-        <InnerContainer>
-          <ContentBox>
-            <FlexBox>
-              <IntroLeftSection>
-                <IntroText>{landingText}</IntroText>
-              </IntroLeftSection>
-              <IntroRightSection visible={localVisible}>
-                {localVisible === true ? <Symbol /> : null}
-              </IntroRightSection>
-            </FlexBox>
-          </ContentBox>
-        </InnerContainer>
+        <ContentBox>
+          <FlexBox>
+            <IntroLeftSection>
+              <IntroText>{landingText}</IntroText>
+            </IntroLeftSection>
+            <IntroRightSection visible={localVisible}>
+              {localVisible === true ? <Symbol /> : null}
+            </IntroRightSection>
+          </FlexBox>
+        </ContentBox>
       </IntroWrap>
     </>
   );
@@ -111,18 +105,14 @@ export default function Intro() {
 
 const IntroWrap = styled.section`
   position: relative;
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
   background: #1d1f20;
   z-index: 0;
 `;
 
 const IntroText = styled.h1`
   position: relative;
-  font-size: 6rem;
+  font-size: 5.6rem;
   text-transform: uppercase;
   white-space: pre-line;
   line-height: 16rem;
@@ -130,11 +120,16 @@ const IntroText = styled.h1`
   z-index: 10;
   transition: all 0.5s;
   ${media.medium`
-  font-size: 4.8rem;
+  font-size: 4.4rem;
+  line-height: 12rem;
 `}
   ${media.small`
     font-size: 3.6rem;
     line-height: 10rem;
+    margin: 0;
+    `}
+  ${media.xSmall`
+    font-size: 2.8rem;
     `}
 `;
 
@@ -143,13 +138,11 @@ const IntroLeftSection = styled.section`
   width: 100%;
   transition: all 0.5s;
   ${media.large`
-    width: 70%;
     transition: 0.5s;
     margin-left: 2.8rem;
     margin-right: 1.2rem;
   `}
   ${media.small`
-  width: 100%;
   margin: 0;
     `}
 `;
@@ -157,6 +150,7 @@ const IntroLeftSection = styled.section`
 const IntroRightSection = styled.section<VisibleProps>`
   height: 100%;
   width: fit-content;
+  margin-left: 8rem;
   z-index: 30;
   opacity: 0;
   ${(props) =>
@@ -167,6 +161,9 @@ const IntroRightSection = styled.section<VisibleProps>`
       : css`
           animation: ${fadeOut} 2s linear forwards;
         `}
+  ${media.small`
+  margin: 0;
+    `}
 `;
 
 const MagicScreen = styled.div`
@@ -176,7 +173,7 @@ const MagicScreen = styled.div`
   left: calc(50% - 10rem);
   width: 24rem;
   height: 24rem;
-  background: url("/assets/image/myphoto.jpeg") 50% 50% no-repeat fixed;
+  background: url("/assets/image/myphoto.jpeg") no-repeat center fixed;
   background-size: cover;
   border-radius: 50%;
 `;

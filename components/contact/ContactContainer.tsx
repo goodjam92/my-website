@@ -41,6 +41,9 @@ const ContactHeader = styled.h2`
   ${media.small`
   font-size: 2.8rem;
   `}
+  ${media.xSmall`
+  font-size: 2.4rem;
+  `}
 `;
 
 const ContactThanks = styled.h2`
@@ -51,6 +54,9 @@ const ContactThanks = styled.h2`
   line-height: 150%;
   ${media.small`
   font-size: 2rem;
+  `}
+  ${media.xSmall`
+  font-size: 1.6rem;
   `}
 `;
 

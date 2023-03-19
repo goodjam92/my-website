@@ -13,10 +13,15 @@ interface DescriptionProps {
 }
 
 export default function Description({ selectedSkill }: DescriptionProps) {
-  function logoRender(skillList: string[]) {
+  function logoRender(skillList: { skill: string; src: string }[]) {
     const render = () => {
       const renderList = skillList.map((item, index) => (
-        <MySkillLogo logoFile={item} key={item} index={index} />
+        <MySkillLogo
+          logoFile={item.src}
+          key={item.src}
+          index={index}
+          text={item.skill}
+        />
       ));
       return renderList;
     };
@@ -36,11 +41,22 @@ export default function Description({ selectedSkill }: DescriptionProps) {
 }
 
 const DescriptionWrap = styled.div`
-  width: 100%;
+  min-width: 34rem;
   min-height: 44rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  ${media.medium`
+  min-height: 40rem;
+  min-width: 40rem;
+`}
+  ${media.small`
+  min-height: 32rem;
+  min-width: 38rem;
+`}
+  ${media.xSmall`
+  min-height: 30rem;
+`}
 `;
 
 const DescriptionContent = styled.ul`

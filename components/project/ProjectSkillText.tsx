@@ -26,4 +26,8 @@ const SkillTextBox = styled.div`
         font-size: 1.6rem;
         font-weight: 300;
 `}
+  ${media.xSmall`
+        font-size: 1.2rem;
+        font-weight: 300;
+`}
 `;

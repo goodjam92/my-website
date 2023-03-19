@@ -1,33 +1,21 @@
 import { media } from "@/styles/media";
 import styled from "styled-components";
 
-export const InnerContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const ContentBox = styled.div`
-  min-width: 120rem;
+  width: 100%;
   height: 100%;
   margin-left: 10rem;
   margin-right: 2rem;
   padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   transition: all 0.5s;
   ${media.large`
-  min-width: 108rem;
-  margin: 0;
-`}
-  ${media.medium`
-  min-width: 88rem;
   margin: 0;
 `}
   ${media.small`
-  min-width: fit-content;
-  margin: 0;
   padding: 0;
     `}
 `;
@@ -40,4 +28,24 @@ export const FlexBox = styled.div`
   ${media.medium`
   flex-direction: column;
 `}
+`;
+
+export const HyphenTextWrap = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+interface HyphenTextProps {
+  fontSize: number;
+}
+
+export const Hyphen = styled.div<HyphenTextProps>`
+  font-size: ${(props) => props.fontSize}rem;
+  align-self: flex-start;
+`;
+
+export const HyphenText = styled.h3<HyphenTextProps>`
+  font-size: ${(props) => props.fontSize}rem;
+  font-weight: 500;
 `;

@@ -65,6 +65,9 @@ const ImageSlideContainer = styled.div`
   ${media.medium`
     padding:0.4rem;
 `}
+  ${media.small`
+  padding: 0;
+`}
 `;
 
 const ImageItem = styled.img`
@@ -75,4 +78,8 @@ const ImageItem = styled.img`
   border-color: #797979;
   border-radius: 0.2rem;
   box-shadow: 0.4rem 0.4rem 0.4rem #828282;
+  ${media.xSmall`
+    height: 300px;
+    width: 330px;
+`}
 `;
