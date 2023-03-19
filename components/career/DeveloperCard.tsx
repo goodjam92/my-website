@@ -49,7 +49,7 @@ const Period = styled.h2`
 
 const Work = styled.h2`
   font-size: 2rem;
-  margin-top: 2rem;
+  line-height: 2;
   font-weight: 400;
   white-space: pre-line;
   ${media.medium`

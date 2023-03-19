@@ -30,16 +30,19 @@ const OtherBackCard = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   ${media.medium`
   padding: 2rem;
-  gap: 1rem;
+  gap: 2rem;
+`}
+  ${media.small`
+  padding: 2rem;
+  gap: 0;
 `}
 `;
 
 const OtherBackInfo = styled.div`
   width: 100%;
-  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,13 +63,26 @@ const Period = styled.h2`
   ${media.medium`
   font-size: 1.6rem;
 `}
+  ${media.small`
+  font-size: 1.6rem;
+  margin: 0;
+`}
 `;
 
 const Work = styled.h2`
   font-size: 2rem;
-  margin-top: 1rem;
+  line-height: 2;
   font-weight: 400;
   ${media.medium`
   font-size: 1.6rem;
+  line-height: 1.5;
+`}
+  ${media.small`
+  font-size: 1.6rem;
+  line-height: 2;
+  margin: 0;
+`}
+  ${media.xSmall`
+  line-height: 1.5;
 `}
 `;

@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "react-three-fiber";
 import styled from "styled-components";
+import { media } from "@/styles/media";
 
 const SimbolComponent = lazy(() => import("@/components/intro/MySymbol"));
 
@@ -26,4 +27,7 @@ const SymbolWrap = styled.div`
   align-items: center;
   justify-content: center;
   width: fit-content;
+  ${media.xSmall`
+    
+  `}
 `;

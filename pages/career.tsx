@@ -68,11 +68,15 @@ const CareerContentBox = styled.div`
   margin: 0;
 `}
   ${media.medium`
-  min-width: 68rem;
+  min-width: 66rem;
   margin: 0;
 `}
   ${media.small`
-  min-width: 60rem;
+  min-width: 52.8rem;
+  margin: 0;
+`}
+  ${media.xSmall`
+  min-width: 44.8rem;
   margin: 0;
 `}
 `;
@@ -91,7 +95,11 @@ const CareerFlexBox = styled.div`
   `}
   ${media.medium`
   flex-direction: column;
-  min-height: 64rem;
+  min-height: 62rem;
+  `}
+  ${media.xSmall`
+  flex-direction: column;
+  min-height: 52rem;
   `}
 `;
 
@@ -110,6 +118,9 @@ const CareerHeadText = styled.h2`
   text-align: center;
   font-family: "RussoOne-Regular";
   font-weight: 400;
+  ${media.xSmall`
+  font-size: 3.6rem;
+  `}
 `;
 
 const InfoCard = styled.div`
@@ -127,6 +138,9 @@ const InfoCard = styled.div`
   :active {
     box-shadow: 0.8rem 0.8rem 0.8rem 0.4rem rgba(0, 0, 0, 0.3) inset;
   }
+  ${media.xSmall`
+  border-radius: 1.2rem;
+  `}
 `;
 
 const InfoFrontCard = styled(InfoCard)`
