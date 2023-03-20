@@ -32,6 +32,7 @@ export default function SlideRightContent({
 const RightContentWrap = styled.div<VisibleProps>`
   width: 40%;
   height: 100%;
+  text-align: center;
   .slick-slide {
     margin: 0 auto;
   }
