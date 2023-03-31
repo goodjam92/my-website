@@ -12,7 +12,7 @@ export const DENPIC_PROJECT_TEXT: ProjectProps = {
     "Firebase 이메일 인증 후 회원가입 로직 구현",
     "환자 관리 페이지 및 환자 치아 사진 데이터 관리 및 드래그 앤 드롭 사진 위치 변경 기능 구현",
     "비동기 처리 및 Firebase 데이터 실시간 양방향 통신 구현",
-    "emoion & storybook을 이용한 UI 컴포넌트 라이브러리화 작업",
+    "emotion & storybook을 이용한 UI 컴포넌트 라이브러리화 작업",
     "상태 관리를 위한 Recoil 도입",
   ],
   USE_SKILL: [
